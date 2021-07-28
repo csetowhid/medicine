@@ -8,73 +8,48 @@
         <div class="ms-panel-body">
             <form class="needs-validation" novalidate>
                 <div class="form-row">
-                    <div class="col-md-4 mb-3">
-                        <label for="validationCustom006">First name</label>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom006">Medicine name</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="validationCustom006" placeholder="First name" value="Anastasia">
-                            <div class="valid-tooltip">
-                                Looks good!
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="validationCustom007">Last name</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="validationCustom007" placeholder="Last name" value="Yenden" required>
-                            <div class="valid-tooltip">
-                                Looks good!
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="validationCustomUsername1">Username</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroupPrepend1">@</span>
-                            </div>
-                            <input type="text" class="form-control" id="validationCustomUsername1" placeholder="Username" aria-describedby="inputGroupPrepend1" required>
+                            <input type="text" class="form-control" id="validationCustom006" placeholder="Medicine name" required>
                             <div class="invalid-tooltip">
-                                Please choose a username.
+                                Please Provide a Medicine Name.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom007">Generic name</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="validationCustom007" placeholder="Generic name" required>
+                            <div class="invalid-tooltip">
+                                Please Provide a Generic Name.
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
-                        <label for="validationCustom008">City</label>
+                        <label for="validationCustom008">Brand Name</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="validationCustom008" placeholder="City" required>
+                            <input type="text" class="form-control" id="validationCustom008" placeholder="Brand Name" required>
                             <div class="invalid-tooltip">
-                                Please provide a valid city.
+                                Please Provide a Brand Name.
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="validationCustom009">State</label>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom009">Drug Class</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="validationCustom009" placeholder="State" required>
+                            <input type="text" class="form-control" id="validationCustom009" placeholder="Drug Class" required>
                             <div class="invalid-tooltip">
-                                Please provide a valid state.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="validationCustom100">Zip</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="validationCustom100" placeholder="Zip" required>
-                            <div class="invalid-tooltip">
-                                Please provide a valid zip.
+                                Please Provide a Drug Class.
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="form-check pl-0">
-                        <label class="ms-checkbox-wrap">
-                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck1">
-                            <i class="ms-checkbox-check"></i>
-                        </label>
-                        <span> Agree to terms and conditions </span>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <textarea id="summernote" name="editordata"></textarea>
                     </div>
                 </div>
                 <button class="btn btn-primary" type="submit">Submit form</button>
@@ -82,4 +57,11 @@
         </div>
     </div>
     </div>
+@endsection
+@section('js')
+    <script>
+        $(document).ready(function() {
+            $('#summernote').summernote();
+        });
+    </script>
 @endsection

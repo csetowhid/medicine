@@ -23,6 +23,8 @@
 
     <!-- Page Specific CSS (Morris Charts.css) -->
     <link href="{{asset('backend/assets/css/morris.css')}}" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
 </head>
@@ -1023,6 +1025,9 @@
 <script src="{{asset('backend/assets/js/framework.js')}}"></script>
 <!-- Settings -->
 <script src="{{asset('backend/assets/js/settings.js')}}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+@yield('js')
 </body>
 
 </html>
