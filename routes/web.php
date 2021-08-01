@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MedicineController;
+use App\Http\Controllers\SettingsController;
 
 Route::get('/', function () {
     return view('home.homepage');
@@ -14,3 +15,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //Medicine
 Route::get('/medicine/add', [MedicineController::class, 'index'])->name('medicine.add');
+
+//Medicine
+Route::get('/settings/index', [SettingsController::class, 'index'])->name('settings.index');

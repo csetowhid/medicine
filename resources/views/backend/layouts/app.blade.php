@@ -92,131 +92,6 @@
                 <span><i class="material-icons fs-16">dashboard</i>Dashboard </span>
             </a>
         </li>
-
-        <!-- /Dashboard -->
-        <!-- Doctor -->
-{{--        <li class="menu-item">--}}
-{{--            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#doctor" aria-expanded="false" aria-controls="doctor">--}}
-{{--                <span><i class="fas fa-stethoscope"></i>Doctor</span>--}}
-{{--            </a>--}}
-{{--            <ul id="doctor" class="collapse" aria-labelledby="doctor" data-parent="#side-nav-accordion">--}}
-{{--                <li> <a href="pages/doctor/add-doctor.html">Add Doctor</a> </li>--}}
-{{--                <li> <a href="pages/doctor/doctor-list.html">Doctor List</a> </li>--}}
-{{--            </ul>--}}
-{{--        </li>--}}
-        <!-- Doctor -->
-        <!-- Patient -->
-{{--        <li class="menu-item">--}}
-{{--            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#patient" aria-expanded="false" aria-controls="patient">--}}
-{{--                <span><i class="fas fa-user"></i>Patient</span>--}}
-{{--            </a>--}}
-{{--            <ul id="patient" class="collapse" aria-labelledby="patient" data-parent="#side-nav-accordion">--}}
-{{--                <li> <a href="pages/patient/add-patient.html">Add Patient</a> </li>--}}
-{{--                <li> <a href="pages/patient/patient-list.html">Patient List</a> </li>--}}
-{{--            </ul>--}}
-{{--        </li>--}}
-        <!-- /Patient -->
-        <!-- Department -->
-{{--        <li class="menu-item">--}}
-{{--            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#department" aria-expanded="false" aria-controls="department">--}}
-{{--                <span><i class="fas fa-sitemap"></i>Department</span>--}}
-{{--            </a>--}}
-{{--            <ul id="department" class="collapse" aria-labelledby="department" data-parent="#side-nav-accordion">--}}
-{{--                <li> <a href="pages/department/add-department.html">Add Department</a> </li>--}}
-{{--                <li> <a href="pages/department/department-list.html">Department List</a> </li>--}}
-{{--            </ul>--}}
-{{--        </li>--}}
-        <!-- /Department -->
-        <!-- Schedule -->
-{{--        <li class="menu-item">--}}
-{{--            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#schedule" aria-expanded="false" aria-controls="schedule">--}}
-{{--                <span><i class="fas fa-list-alt"></i>Doctor Schedule</span>--}}
-{{--            </a>--}}
-{{--            <ul id="schedule" class="collapse" aria-labelledby="schedule" data-parent="#side-nav-accordion">--}}
-{{--                <li> <a href="pages/doctor-schedule/add-schedule.html">Add Schedule</a> </li>--}}
-{{--                <li> <a href="pages/doctor-schedule/schedule-list.html">Schedule List</a> </li>--}}
-{{--            </ul>--}}
-{{--        </li>--}}
-        <!-- /Schedule -->
-        <!-- Appointment -->
-{{--        <li class="menu-item">--}}
-{{--            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#appointment" aria-expanded="false" aria-controls="appointment">--}}
-{{--                <span><i class="far fa-check-square"></i>Appointment</span>--}}
-{{--            </a>--}}
-{{--            <ul id="appointment" class="collapse" aria-labelledby="appointment" data-parent="#side-nav-accordion">--}}
-{{--                <li> <a href="pages/appointment/add-appointment.html">Add Appointment</a> </li>--}}
-{{--                <li> <a href="pages/appointment/appointment-list.html">Appointment List</a> </li>--}}
-{{--            </ul>--}}
-{{--        </li>--}}
-        <!-- /Appointment -->
-        <!-- Payment -->
-{{--        <li class="menu-item">--}}
-{{--            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#payment" aria-expanded="false" aria-controls="payment">--}}
-{{--                <span><i class="fas fa-credit-card"></i>Payment</span>--}}
-{{--            </a>--}}
-{{--            <ul id="payment" class="collapse" aria-labelledby="payment" data-parent="#side-nav-accordion">--}}
-{{--                <li> <a href="pages/payment/add-payment.html">Add Payment</a> </li>--}}
-{{--                <li> <a href="pages/payment/payment-list.html">Payment List</a> </li>--}}
-{{--                <li> <a href="pages/payment/payment-invoice.html">Payment Invoice</a> </li>--}}
-{{--            </ul>--}}
-{{--        </li>--}}
-        <!-- /Payment -->
-        <!-- Report -->
-{{--        <li class="menu-item">--}}
-{{--            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#report" aria-expanded="false" aria-controls="report">--}}
-{{--                <span><i class="fas fa-file-alt"></i>Report</span>--}}
-{{--            </a>--}}
-{{--            <ul id="report" class="collapse" aria-labelledby="report" data-parent="#side-nav-accordion">--}}
-{{--                <li> <a href="pages/report/patient-report.html">Patient Wise Report</a> </li>--}}
-{{--                <li> <a href="pages/report/doctor-report.html">Doctor Wise Report</a> </li>--}}
-{{--                <li> <a href="pages/report/total-report.html">Total Report</a> </li>--}}
-{{--            </ul>--}}
-{{--        </li>--}}
-        <!-- /Report -->
-        <!-- Human Resource -->
-{{--        <li class="menu-item">--}}
-{{--            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#human-resource" aria-expanded="false" aria-controls="human-resource">--}}
-{{--                <span><i class="far fa-user-circle"></i>Human Resource</span>--}}
-{{--            </a>--}}
-{{--            <ul id="human-resource" class="collapse" aria-labelledby="human-resource" data-parent="#side-nav-accordion">--}}
-{{--                <li> <a href="pages/human-resource/add-employee.html">Add Employee</a> </li>--}}
-{{--                <li> <a href="pages/human-resource/employee-list.html">Employee List</a> </li>--}}
-{{--                <li> <a href="pages/human-resource/add-nurse.html">Add Nurse</a> </li>--}}
-{{--                <li> <a href="pages/human-resource/nurse-list.html">Nurse List</a> </li>--}}
-{{--                <li> <a href="pages/human-resource/add-pharmacist.html">Add Pharmacist</a> </li>--}}
-{{--                <li> <a href="pages/human-resource/pharmacist-list.html">Pharmacist List</a> </li>--}}
-{{--                <li> <a href="pages/human-resource/add-representative.html">Add Representative</a> </li>--}}
-{{--                <li> <a href="pages/human-resource/representative-list.html">Representative List</a> </li>--}}
-{{--            </ul>--}}
-{{--        </li>--}}
-        <!-- /Human Resource -->
-        <!-- Bed -->
-{{--        <li class="menu-item">--}}
-{{--            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#bed" aria-expanded="false" aria-controls="bed">--}}
-{{--                <span><i class="fas fa-bed"></i>Bed Manager</span>--}}
-{{--            </a>--}}
-{{--            <ul id="bed" class="collapse" aria-labelledby="bed" data-parent="#side-nav-accordion">--}}
-{{--                <li> <a href="pages/bed-manager/add-bed.html">Add Bed</a> </li>--}}
-{{--                <li> <a href="pages/bed-manager/bed-list.html">Bed List</a> </li>--}}
-{{--            </ul>--}}
-{{--        </li>--}}
-        <!-- /Bed-->
-        <!-- Notice -->
-{{--        <li class="menu-item">--}}
-{{--            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#notice" aria-expanded="false" aria-controls="notice">--}}
-{{--                <span><i class="far fa-file-alt"></i>Notice</span>--}}
-{{--            </a>--}}
-{{--            <ul id="notice" class="collapse" aria-labelledby="notice" data-parent="#side-nav-accordion">--}}
-{{--                <li> <a href="pages/notice/add-notice.html">Add Notice</a> </li>--}}
-{{--                <li> <a href="pages/notice/notice-list.html">Notice List</a> </li>--}}
-{{--            </ul>--}}
-{{--        </li>--}}
-        <!-- /Notice -->
-{{--        <li class="menu-item">--}}
-{{--            <a href="pages/widgets.html">--}}
-{{--                <span><i class="material-icons fs-16">widgets</i>Widgets</span>--}}
-{{--            </a>--}}
-{{--        </li>--}}
         <!-- Basic UI Elements -->
         <li class="menu-item">
             <a href="#" class="has-chevron" data-toggle="collapse" data-target="#basic-elements" aria-expanded="false" aria-controls="basic-elements">
@@ -227,6 +102,11 @@
                 <li> <a href="pages/ui-basic/alerts.html">All List</a> </li>
 
             </ul>
+        </li>
+        <li class="menu-item">
+            <a href="{{route('settings.index')}}">
+                <span><i class="material-icons fs-16">settings</i>Settings </span>
+            </a>
         </li>
         <!-- /Basic UI Elements -->
         <!-- Advanced UI Elements -->
