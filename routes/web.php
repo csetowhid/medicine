@@ -14,9 +14,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 //Medicine
-Route::get('/medicine/add', [MedicineController::class, 'index'])->name('medicine.add');
+Route::get('/medicine/index', [MedicineController::class, 'index'])->name('medicine.index');
+Route::post('/medicine/add', [MedicineController::class, 'add'])->name('medicine.add');
 
 //Medicine
 Route::get('/settings/index', [SettingsController::class, 'index'])->name('settings.index');
 Route::post('/settings/add', [SettingsController::class, 'add'])->name('settings.add');
-//Route::post('/settings/update', [SettingsController::class, 'add'])->name('settings.update');
+Route::post('/settings/update', [SettingsController::class, 'update'])->name('settings.update');

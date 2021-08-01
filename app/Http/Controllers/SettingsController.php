@@ -35,4 +35,25 @@ class SettingsController extends Controller
         }
         return back()->with($notification);
     }
+    public function update(Request $request)
+    {
+        if (isset($request->settings))
+        {
+            foreach ($request->settings as $key => $value) {
+                updatesettings($key, $value);
+            }
+            $notification=array(
+                'messege'=>'Successfully Settings Updated',
+                'alert-type'=>'success'
+            );
+        }
+        else{
+        $notification=array(
+            'messege'=>'Something Wnt Wrong!',
+            'alert-type'=>'error'
+        );
+        }
+        return back()->with($notification);
+
+    }
 }

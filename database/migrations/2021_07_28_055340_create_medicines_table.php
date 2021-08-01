@@ -15,6 +15,16 @@ class CreateMedicinesTable extends Migration
     {
         Schema::create('medicines', function (Blueprint $table) {
             $table->id();
+            $table->string('medicine_name');
+            $table->string('medicine_generic_name');
+            $table->string('medicine_brand_name');
+            $table->string('medicine_drug_class');
+            $table->string('medicine_image')->nullable();
+            $table->longText('medicine_description');
+            $table->string('medicine_seo_title');
+            $table->string('medicine_seo_permalink');
+            $table->longText('medicine_seo_description');
+            $table->integer('medicine_status');
             $table->timestamps();
         });
     }

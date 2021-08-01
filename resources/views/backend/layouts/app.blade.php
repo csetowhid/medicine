@@ -101,7 +101,7 @@
                 <span><i class="material-icons fs-16">album</i>Medicine</span>
             </a>
             <ul id="basic-elements" class="collapse" aria-labelledby="basic-elements" data-parent="#side-nav-accordion">
-                <li> <a href="{{route('medicine.add')}}">Add New</a> </li>
+                <li> <a href="{{route('medicine.index')}}">Add New</a> </li>
                 <li> <a href="pages/ui-basic/alerts.html">All List</a> </li>
 
             </ul>

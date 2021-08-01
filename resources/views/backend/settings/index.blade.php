@@ -50,23 +50,24 @@
                 <h6>All Settings</h6>
             </div>
             <div class="ms-panel-body">
-                <form class="needs-validation" novalidate>
+                <form action="{{route('settings.update')}}" method="post" class="needs-validation" novalidate>
+                    @csrf
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom006"><b>Domain name</b></label>
                             <div class="input-group">
-                                <input type="text" class="form-control" name="{{getsettings('domain_name')}}" value="{{getsettings('domain_name')}}" id="validationCustom006" placeholder="Domain name" required>
+                                <input type="text" class="form-control" name="settings[domain_name]" value="{{getsettings('domain_name')}}" id="validationCustom006" placeholder="Domain name" required>
                                 <div class="invalid-tooltip">
                                     Please Provide a Domain Name.
                                 </div>
                             </div>
                         </div>
 {{--                        <div class="col-md-6 mb-3">--}}
-{{--                            <label for="validationCustom007">Generic name</label>--}}
+{{--                            <label for="validationCustom006"><b>Domain name</b></label>--}}
 {{--                            <div class="input-group">--}}
-{{--                                <input type="text" class="form-control" id="validationCustom007" placeholder="Generic name" required>--}}
+{{--                                <input type="text" class="form-control" name="settings[new_name]" value="{{getsettings('new_name')}}" id="validationCustom006" placeholder="Domain name" required>--}}
 {{--                                <div class="invalid-tooltip">--}}
-{{--                                    Please Provide a Generic Name.--}}
+{{--                                    Please Provide a Domain Name.--}}
 {{--                                </div>--}}
 {{--                            </div>--}}
 {{--                        </div>--}}
