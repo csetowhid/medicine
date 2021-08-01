@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="{{asset('backend/vendors/iconic-fonts/flat-icons/flaticon.css')}}">
     <link rel="stylesheet" href="{{asset('backend/vendors/iconic-fonts/cryptocoins/cryptocoins.css')}}">
     <link rel="stylesheet" href="{{asset('backend/vendors/iconic-fonts/cryptocoins/cryptocoins-colors.css')}}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"/>
+
     <!-- Bootstrap core CSS -->
     <link href="{{asset('backend/assets/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- jQuery UI -->
@@ -905,6 +908,28 @@
 <script src="{{asset('backend/assets/js/framework.js')}}"></script>
 <!-- Settings -->
 <script src="{{asset('backend/assets/js/settings.js')}}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script>
+    @if(Session::has('messege'))
+    var type="{{Session::get('alert-type')}}"
+    switch(type){
+        case 'info':
+            toastr.info("{{ Session::get('messege') }}");
+            break;
+        case 'success':
+            toastr.success("{{ Session::get('messege') }}");
+            break;
+        case 'warning':
+            toastr.warning("{{ Session::get('messege') }}");
+            break;
+        case 'error':
+            toastr.error("{{ Session::get('messege') }}");
+            break;
+    }
+    {{Session::forget('messege')}}
+    @endif
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 @yield('js')

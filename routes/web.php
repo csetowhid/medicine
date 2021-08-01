@@ -18,3 +18,4 @@ Route::get('/medicine/add', [MedicineController::class, 'index'])->name('medicin
 
 //Medicine
 Route::get('/settings/index', [SettingsController::class, 'index'])->name('settings.index');
+Route::post('/settings/add', [SettingsController::class, 'add'])->name('settings.add');
