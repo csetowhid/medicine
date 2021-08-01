@@ -48,10 +48,31 @@
             </div>
             <div class="ms-panel-header">
                 <h6>All Settings</h6>
-                <h6>{{getsettings('fhhjf')}}</h6>
             </div>
             <div class="ms-panel-body">
-
+                <form class="needs-validation" novalidate>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom006"><b>Domain name</b></label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="{{getsettings('domain_name')}}" value="{{getsettings('domain_name')}}" id="validationCustom006" placeholder="Domain name" required>
+                                <div class="invalid-tooltip">
+                                    Please Provide a Domain Name.
+                                </div>
+                            </div>
+                        </div>
+{{--                        <div class="col-md-6 mb-3">--}}
+{{--                            <label for="validationCustom007">Generic name</label>--}}
+{{--                            <div class="input-group">--}}
+{{--                                <input type="text" class="form-control" id="validationCustom007" placeholder="Generic name" required>--}}
+{{--                                <div class="invalid-tooltip">--}}
+{{--                                    Please Provide a Generic Name.--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+                    </div>
+                    <button class="btn btn-primary" type="submit">Update</button>
+                </form>
             </div>
         </div>
     </div>
