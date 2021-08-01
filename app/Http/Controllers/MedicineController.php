@@ -31,9 +31,31 @@ class MedicineController extends Controller
         $medicine->medicine_brand_name = $request->medicine_brand_name;
         $medicine->medicine_drug_class = $request->medicine_drug_class;
         $medicine->medicine_description = $request->medicine_description;
-        $medicine->medicine_seo_title = $request;
+        $medicine->medicine_seo_title = $dom;
         $medicine->medicine_seo_permalink = $request->medicine_seo_permalink;
         $medicine->medicine_seo_description = $request->medicine_seo_description;
         $medicine->medicine_status = $request->medicine_status;
+        $medicine_image=$request->file('medicine_image');
+        if($medicine_image) {
+            $image_name=hexdec(uniqid());
+            $ext=strtolower($medicine_image->getClientOriginalExtension());
+            $image_full_name=$image_name.'.'.$ext;
+            $upload_path='upload/';
+            $image_url=$upload_path.$image_full_name;
+            $medicine_image->move($upload_path,$image_full_name);
+            $medicine->medicine_image=$image_url;
+            $medicine->save();
+            $notification=array(
+                'messege'=>'Successfully Medicine Added With Image',
+                'alert-type'=>'success'
+            );
+        }else{
+            $medicine->save();
+            $notification=array(
+                'messege'=>'Successfully Medicine Added Without Image',
+                'alert-type'=>'success'
+            );
+        }
+        return back()->with($notification);
     }
 }
