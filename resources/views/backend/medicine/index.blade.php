@@ -54,6 +54,7 @@
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" id="validatedCustomFile" name="medicine_image">
                             <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                            <small>Picture Size Must be Less than 4000 kb</small>
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
@@ -87,22 +88,24 @@
                     <div class="col-md-12 mb-3">
                         <label for="validationCustom009">Title</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" name="medicine_seo_title" id="validationCustom009" placeholder="SEO Title" required>
+                            <input type="text" class="form-control" value="{{ old('medicine_seo_title') }}" name="medicine_seo_title" id="validationCustom009" placeholder="SEO Title" required>
                             <div class="invalid-tooltip">
                                 Please Provide a SEO Title.
                             </div>
                         </div>
+                        <small>SEO Title can't be More Than 60 Words</small>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-12 mb-3">
                         <label for="validationCustom009">Permalink</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" name="medicine_seo_permalink" id="validationCustom009" placeholder="SEO Permalink" required>
+                            <input type="text" class="form-control" value="{{ old('medicine_seo_permalink') }}" name="medicine_seo_permalink" id="validationCustom009" placeholder="SEO Permalink" required>
                             <div class="invalid-tooltip">
                                 Please Provide a SEO Permalink.
                             </div>
                         </div>
+                        <small>SEO Permalink can't be More Than 160 Words</small>
                     </div>
                 </div>
                 <div class="form-row">
@@ -128,7 +131,7 @@
 {{--                        </li>--}}
 {{--                    </div>--}}
 {{--                </div>--}}
-                <button class="btn btn-primary" type="submit">Submit form</button>
+                <button class="btn btn-primary" type="submit">Submit</button>
             </form>
         </div>
     </div>
@@ -137,7 +140,9 @@
 @section('js')
     <script>
         $(document).ready(function() {
-            $('#summernote').summernote();
+            $('#summernote').summernote({
+                height: 350,
+            });
         });
     </script>
 @endsection
