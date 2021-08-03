@@ -19,6 +19,8 @@
     <link href="{{asset('backend/assets/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- jQuery UI -->
     <link href="{{asset('backend/assets/css/jquery-ui.min.css')}}" rel="stylesheet">
+    <!-- Page Specific Css (Datatables.css) -->
+    <link href="{{asset('backend/assets/css/datatables.min.css')}}" rel="stylesheet">
     <!-- Page Specific CSS (Slick Slider.css) -->
     <link href="{{asset('backend/assets/css/slick.css')}}" rel="stylesheet">
     <!-- medjestic styles -->
@@ -102,8 +104,7 @@
             </a>
             <ul id="basic-elements" class="collapse" aria-labelledby="basic-elements" data-parent="#side-nav-accordion">
                 <li> <a href="{{route('medicine.index')}}">Add New</a> </li>
-                <li> <a href="pages/ui-basic/alerts.html">All List</a> </li>
-
+                <li> <a href="{{route('medicine.all')}}">All List</a> </li>
             </ul>
         </li>
         <li class="menu-item">
@@ -868,6 +869,9 @@
 <script src="{{asset('backend/assets/js/jquery.webticker.min.js')}}"> </script>
 <script src="{{asset('backend/assets/js/Chart.bundle.min.js')}}"> </script>
 <script src="{{asset('backend/assets/js/index-chart.js')}}"> </script>
+
+<script src="{{asset('backend/assets/js/datatables.min.js')}}"> </script>
+<script src="{{asset('backend/assets/js/data-tables.js')}}"> </script>
 
 <!-- Page Specific Scripts Finish -->
 <script src="{{asset('backend/assets/js/calendar.js')}}"></script>

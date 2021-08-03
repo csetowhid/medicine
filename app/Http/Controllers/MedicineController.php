@@ -58,4 +58,10 @@ class MedicineController extends Controller
         }
         return back()->with($notification);
     }
+
+    public function all()
+    {
+        $medicine = Medicine::all();
+        return view('backend.medicine.all',compact('medicine'));
+    }
 }
