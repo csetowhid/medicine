@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Medicine;
+//use DataTables;
 class MedicineController extends Controller
 {
     public function index()
@@ -61,7 +62,11 @@ class MedicineController extends Controller
 
     public function all()
     {
-        $medicine = Medicine::all();
-        return view('backend.medicine.all',compact('medicine'));
+        $data = Medicine::all();
+        if (request()->ajax()){
+            return datatables()->of($data)
+            ->make(true);
+        }
+        return view('backend.medicine.all');
     }
 }
