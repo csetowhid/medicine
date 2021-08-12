@@ -65,7 +65,18 @@ class MedicineController extends Controller
         $data = Medicine::all();
         if (request()->ajax()){
             return datatables()->of($data)
-            ->make(true);
+//            ->make(true);
+                ->editColumn('status', function ($data) {
+                    return $data->medicine_status ? '<button style="margin-top: 0;" class="btn btn-sm btn-dark">Active</button>' : '<button style="margin-top: 0;" class="btn btn-sm btn-light">InActive</button>';
+                })
+                ->addColumn('Actions',function ($data){
+                    $button= '<a href="active_coin/'.$data->id.'"><button style="margin-top: 0;margin-right: 5px;" class="btn btn-sm btn-primary">Edit</button></a>';
+                    $button .= '<a href="Rejected_coin/'.$data->id.'"><button style="margin-top: 0;margin-left: 5px;" class="btn btn-sm btn-danger">Delete</button></a>';
+
+                    return $button;
+                })
+                ->rawColumns(['Actions','status'])
+                ->make(true);
         }
         return view('backend.medicine.all');
     }
