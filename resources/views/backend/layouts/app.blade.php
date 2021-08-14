@@ -286,7 +286,7 @@
 {{--                        <span> <i class="material-icons">event</i>4 March, 2018</span>--}}
 {{--                        <p class="fs-14">Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>--}}
 {{--                    </li>--}}
-{{--                </ul>--}}
+                </ul>
 {{--                <a href="#" class="btn btn-primary d-block"> View All </a>--}}
 {{--            </div>--}}
 {{--            <div role="tabpanel" class="tab-pane fade" id="recentPosts">--}}
@@ -902,24 +902,38 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script>
 <script>
-    function confirm(link)
-    {
+    // function confirm(link)
+    // {
+    //     swal({
+    //         title: "Are you sure?",
+    //         text: "Want to Delete this file!",
+    //         type: "warning",
+    //         showCancelButton: true,
+    //         confirmButtonColor: "#e69a2a",
+    //         cancelButtonColor: '#d33',
+    //         confirmButtonText: "Yes, delete it!",
+    //         closeOnConfirm: false
+    //     }, function(){
+    //
+    //         swal("Deleted!", "Your imaginary file has been deleted.", "success");
+    //         window.location.href = link;
+    //     });
+    //
+    // }
+    $('.confirm').on('click', function (event) {
+        event.preventDefault();
+        const url = $(this).attr('href');
         swal({
-            title: "Are you sure?",
-            text: "Want to Delete this file!",
-            type: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#e69a2a",
-            cancelButtonColor: '#d33',
-            confirmButtonText: "Yes, delete it!",
-            closeOnConfirm: false
-        }, function(){
-
-            swal("Deleted!", "Your imaginary file has been deleted.", "success");
-            window.location.href = link;
+            title: 'Are you sure?',
+            text: 'This record and it`s details will be permanantly deleted!',
+            icon: 'warning',
+            buttons: ["Cancel", "Yes!"],
+        }).then(function(value) {
+            if (value) {
+                window.location.href = url;
+            }
         });
-
-    }
+    });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 @yield('js')
