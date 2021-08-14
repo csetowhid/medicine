@@ -67,17 +67,42 @@ class MedicineController extends Controller
             return datatables()->of($data)
 //            ->make(true);
                 ->editColumn('status', function ($data) {
-                    return $data->medicine_status ? '<button style="margin-top: 0;" class="btn btn-sm btn-dark">Active</button>' : '<button style="margin-top: 0;" class="btn btn-sm btn-light">InActive</button>';
+                    return $data->medicine_status ? '<button style="margin-top: 0;" class="btn btn-sm btn-pill btn-gradient-dark">Active</button>' : '<button style="margin-top: 0;" class="btn btn-sm btn-pill btn-gradient-light">InActive</button>';
                 })
                 ->addColumn('Actions',function ($data){
-                    $button= '<a href="active_coin/'.$data->id.'"><button style="margin-top: 0;margin-right: 5px;" class="btn btn-sm btn-primary">Edit</button></a>';
-                    $button .= '<a href="Rejected_coin/'.$data->id.'"><button style="margin-top: 0;margin-left: 5px;" class="btn btn-sm btn-danger">Delete</button></a>';
+                    $button= '<a href="active_coin/'.$data->id.'"><button style="margin-top: 0;margin-right: 5px;" class="btn btn-sm btn-pill btn-gradient-primary">Edit</button></a>';
 
+                    $button .= '<a href="medicine_delete/'.$data->id.'"><button style="margin-top: 0;margin-left: 5px;" class="btn btn-pill btn-sm btn-gradient-danger">Delete</button></a>';
+
+//                    onclick="confirm('{{ URL::to('dashboard/education/delete/' . $key->id) }}')"
                     return $button;
                 })
                 ->rawColumns(['Actions','status'])
                 ->make(true);
         }
         return view('backend.medicine.all');
+    }
+
+    public function medicine_delete($id)
+    {
+        $medicine = Medicine::findorfail($id);
+        dd("hoice");
+
+
+
+//        $delete = $medicine->delete();
+
+//        if ($delete) {
+//            $notification=array(
+//                'messege'=>'Successfully Medicine Deleted!',
+//                'alert-type'=>'success'
+//            );
+//        }else{
+//            $notification=array(
+//                'messege'=>'Something went wrong !',
+//                'alert-type'=>'error'
+//            );
+//        }
+//        return back()->with($notification);
     }
 }

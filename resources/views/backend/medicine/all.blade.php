@@ -10,12 +10,12 @@
                     <table id="data_table" class="table table-striped thead-primary w-100">
                         <thead>
                         <tr>
-                            <th>Medicine Name</th>
-                            <th>Generic Name</th>
-                            <th>Brand</th>
-                            <th>Class</th>
-                            <th>Status</th>
-                            <th>Action</th>
+                            <th class="text-center">Medicine Name</th>
+                            <th class="text-center">Generic Name</th>
+                            <th class="text-center">Brand</th>
+                            <th class="text-center">Class</th>
+                            <th class="text-center">Status</th>
+                            <th class="text-center">Action</th>
                         </tr>
                         </thead>
                     </table>

@@ -17,6 +17,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/medicine/index', [MedicineController::class, 'index'])->name('medicine.index');
 Route::post('/medicine/add', [MedicineController::class, 'add'])->name('medicine.add');
 Route::get('/medicine/all', [MedicineController::class, 'all'])->name('medicine.all');
+Route::get('medicine/medicine_delete/{id}', [MedicineController::class, 'medicine_delete'])->name('medicine_delete');
 
 //Medicine
 Route::get('/settings/index', [SettingsController::class, 'index'])->name('settings.index');

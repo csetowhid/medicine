@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{asset('backend/vendors/iconic-fonts/cryptocoins/cryptocoins-colors.css')}}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css" />
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('backend/assets/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -899,7 +900,27 @@
     {{Session::forget('messege')}}
     @endif
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script>
+<script>
+    function confirm(link)
+    {
+        swal({
+            title: "Are you sure?",
+            text: "Want to Delete this file!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#e69a2a",
+            cancelButtonColor: '#d33',
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: false
+        }, function(){
 
+            swal("Deleted!", "Your imaginary file has been deleted.", "success");
+            window.location.href = link;
+        });
+
+    }
+</script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 @yield('js')
 </body>
