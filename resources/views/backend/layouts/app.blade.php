@@ -100,14 +100,20 @@
                 <span><i class="material-icons fs-16">dashboard</i>Dashboard </span>
             </a>
         </li>
+        <li class="menu-item">
+            <a href="{{route('alpha.index')}}">
+                <span><i class="material-icons fs-16">adjust</i>Alpha </span>
+            </a>
+        </li>
         <!-- Basic UI Elements -->
+
         <li class="menu-item">
             <a href="#" class="has-chevron" data-toggle="collapse" data-target="#basic-elements" aria-expanded="false" aria-controls="basic-elements">
                 <span><i class="material-icons fs-16">album</i>Medicine</span>
             </a>
             <ul id="basic-elements" class="collapse" aria-labelledby="basic-elements" data-parent="#side-nav-accordion">
-                <li> <a href="{{route('medicine.index')}}">Add New</a> </li>
-                <li> <a href="{{route('medicine.all')}}">All List</a> </li>
+                <li> <a href="{{route('medicine.index')}}">Add Medicine</a> </li>
+                <li> <a href="{{route('medicine.all')}}">Medicine List</a> </li>
             </ul>
         </li>
         <li class="menu-item">
@@ -902,38 +908,24 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script>
 <script>
-    // function confirm(link)
-    // {
-    //     swal({
-    //         title: "Are you sure?",
-    //         text: "Want to Delete this file!",
-    //         type: "warning",
-    //         showCancelButton: true,
-    //         confirmButtonColor: "#e69a2a",
-    //         cancelButtonColor: '#d33',
-    //         confirmButtonText: "Yes, delete it!",
-    //         closeOnConfirm: false
-    //     }, function(){
-    //
-    //         swal("Deleted!", "Your imaginary file has been deleted.", "success");
-    //         window.location.href = link;
-    //     });
-    //
-    // }
-    $('.confirm').on('click', function (event) {
-        event.preventDefault();
-        const url = $(this).attr('href');
+    function confirm(link)
+    {
         swal({
-            title: 'Are you sure?',
-            text: 'This record and it`s details will be permanantly deleted!',
-            icon: 'warning',
-            buttons: ["Cancel", "Yes!"],
-        }).then(function(value) {
-            if (value) {
-                window.location.href = url;
-            }
+            title: "Are you sure?",
+            text: "Want to Delete this file!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#e69a2a",
+            cancelButtonColor: '#d33',
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: false
+        }, function(){
+
+            swal("Deleted!", "Your imaginary file has been deleted.", "success");
+            window.location.href = link;
         });
-    });
+
+    }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 @yield('js')
