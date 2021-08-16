@@ -13,13 +13,43 @@
                 </div>
             </div>
             <div class="ms-panel-body">
+                <div class="table-responsive">
+                    <table class="table table-striped thead-primary">
+                        <thead>
+                        <tr>
+                            <th class="text-center">SL</th>
+                            <th class="text-center">Alpha Name</th>
+                            <th class="text-center">Description</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @if(isset($alpha))
+                            @php $i = 0 @endphp
+                            @foreach($alpha as $key)
+                        <tr>
+                            <td class="text-center">{{$i+1}}</td>
+                            @php $i++;  @endphp
+                            <td class="text-center">{{$key->alpha_name}}</td>
+                            <td class="text-center">{{$key->alpha_description}}</td>
+                            <td class="text-center">
+                                <a href="#"><i class="fas fa-pencil-alt ms-text-primary" data-toggle="modal" data-target="#modal-3"></i></a>
+                                <a href="a"><i class="far fa-trash-alt ms-text-danger"></i></a>
+                            </td>
+                        </tr>
+                        @endforeach
+                        @endif
+                        </tbody>
+                    </table>
+                </div>
+                <!----------Add Modal Start--------->
                     <div class="modal fade" id="modal-3" tabindex="-1" role="dialog" aria-labelledby="modal-3">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <form action="{{route('alpha.create')}}" method="post" class="needs-validation" novalidate>
                                     @csrf
                                 <div class="modal-header">
-                                    <h3 class="modal-title has-icon ms-icon-round "><i class="flaticon-share bg-primary text-white"></i> Subscribe to our Newsletter</h3>
+                                    <h3 class="modal-title has-icon ms-icon-round "><i class="flaticon-share bg-primary text-white"></i> Add New Alphabet</h3>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 </div>
                                 <div class="modal-body">
@@ -28,7 +58,7 @@
                                             <div class="input-group">
                                                 <input type="text" class="form-control" name="alpha_name" id="validationCustom008" placeholder="Alpha Name" required>
                                                 <div class="invalid-tooltip">
-                                                    Please Provide a Alpha Name.
+                                                    Please Provide a Alphabet Name.
                                                 </div>
                                             </div>
                                     </div>
@@ -50,13 +80,14 @@
                             </div>
                         </div>
                     </div>
-                <form action="" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
-                    @csrf
-
-                </form>
-
+                <!----------Add Modal End--------->
             </div>
         </div>
+
+
+
+
+
 {{--        <div class="ms-panel">--}}
 {{--            <div class="ms-panel-header">--}}
 {{--                <h6>Add New Medicine</h6>--}}

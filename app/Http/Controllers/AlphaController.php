@@ -9,7 +9,8 @@ class AlphaController extends Controller
 {
     public function alpha_index()
     {
-        return view('backend.alpha.index');
+        $alpha = Alpha::all();
+        return view('backend.alpha.index',compact('alpha'));
     }
     public function alpha_create(Request $request)
     {

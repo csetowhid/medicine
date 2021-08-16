@@ -22,7 +22,7 @@ Route::get('/medicine/medicine_delete/{id}', [MedicineController::class, 'medici
 Route::get('/medicine/medicine_edit/{id}', [MedicineController::class, 'medicine_edit'])->name('medicine.edit');
 
 //Settings
-Route::get('/settings/index', [SettingsController::class, 'index'])->name('settings.index');
+Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
 Route::post('/settings/add', [SettingsController::class, 'add'])->name('settings.add');
 Route::post('/settings/update', [SettingsController::class, 'update'])->name('settings.update');
 
