@@ -34,7 +34,7 @@
                             <td class="text-center">{{$key->alpha_description}}</td>
                             <td class="text-center">
                                 <a style="cursor:pointer;" onclick="edit({{$key->id}})"><i class="fas fa-pencil-alt ms-text-primary" data-toggle="modal" data-target="#modal-edit"></i></a>
-                                <a href="a"><i class="far fa-trash-alt ms-text-danger"></i></a>
+                                <a style="cursor:pointer;" href="{{URL::to('alpha/delete/'.$key->id)}}"><i class="far fa-trash-alt ms-text-danger"></i></a>
                             </td>
                         </tr>
                         @endforeach

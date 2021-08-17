@@ -62,4 +62,21 @@ class AlphaController extends Controller
         $alpha = Alpha::findorfail($id);
         return response()->json($alpha);
     }
+    public function alpha_delete($id)
+    {
+        $alpha = Alpha::findorfail($id);
+        $delete = $alpha->delete();
+        if ($delete) {
+            $notification=array(
+                'messege'=>'Successfully Alphabet Deleted!',
+                'alert-type'=>'success'
+            );
+        }else{
+            $notification=array(
+                'messege'=>'Something went wrong !',
+                'alert-type'=>'error'
+            );
+        }
+        return back()->with($notification);
+    }
 }
