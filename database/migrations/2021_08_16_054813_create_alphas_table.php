@@ -14,7 +14,7 @@ class CreateAlphasTable extends Migration
     public function up()
     {
         Schema::create('alphas', function (Blueprint $table) {
-            $table->id('alpha_id');
+            $table->id();
             $table->string('alpha_name')->unique();
             $table->longText('alpha_description');
             $table->timestamps();

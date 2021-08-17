@@ -30,3 +30,4 @@ Route::post('/settings/update', [SettingsController::class, 'update'])->name('se
 //Alpha
 Route::get('/alpha', [AlphaController::class, 'alpha_index'])->name('alpha.index');
 Route::post('/alpha/create', [AlphaController::class, 'alpha_create'])->name('alpha.create');
+Route::get('/alpha/edit/{id}', [AlphaController::class, 'alpha_edit']);
