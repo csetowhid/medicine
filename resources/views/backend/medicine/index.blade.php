@@ -50,6 +50,32 @@
                 </div>
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
+                        <label for="validationCustom008">Alphabet</label>
+                        <div class="input-group">
+                            <select class="form-control" id="validationCustom202" required>
+                                @if(isset($alpha))
+                                    @foreach($alpha as $al)
+                                <option value="{{$al->id}}">{{$al->alpha_name}}</option>
+                                    @endforeach
+                                    @endif
+                            </select>
+                            <div class="invalid-tooltip">
+                                Please Provide Alphabet.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationCustom009">Sub Alphabet </label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="medicine_drug_class" id="validationCustom009" placeholder="Drug Class" required>
+                            <div class="invalid-tooltip">
+                                Please Provide Sub Alphabet.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
                         <label>Medicine Image</label>
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" id="validatedCustomFile" name="medicine_image">
