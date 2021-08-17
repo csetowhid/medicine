@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MedicineController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\AlphaController;
+use App\Http\Controllers\SubAlphaController;
 
 Route::get('/', function () {
     return view('home.homepage');
@@ -32,3 +33,9 @@ Route::get('/alpha', [AlphaController::class, 'alpha_index'])->name('alpha.index
 Route::post('/alpha/create', [AlphaController::class, 'alpha_create'])->name('alpha.create');
 Route::get('/alpha/edit/{id}', [AlphaController::class, 'alpha_edit']);
 Route::get('/alpha/delete/{id}', [AlphaController::class, 'alpha_delete'])->name('alpha.delete');
+
+//Sub Alpha
+Route::get('/subalpha', [SubAlphaController::class, 'sub_alpha_index'])->name('sub.alpha.index');
+Route::post('/subalpha/create', [SubAlphaController::class, 'sub_alpha_create'])->name('sub.alpha.create');
+Route::get('/subalpha/edit/{id}', [SubAlphaController::class, 'sub_alpha_edit']);
+Route::get('/subalpha/delete/{id}', [SubAlphaController::class, 'sub_alpha_delete']);

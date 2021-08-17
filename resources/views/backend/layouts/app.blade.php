@@ -105,6 +105,11 @@
                 <span><i class="material-icons fs-16">adjust</i>Alpha </span>
             </a>
         </li>
+        <li class="menu-item">
+            <a href="{{route('sub.alpha.index')}}">
+                <span><i class="material-icons fs-16">adjust</i>Sub Alpha</span>
+            </a>
+        </li>
         <!-- Basic UI Elements -->
 
         <li class="menu-item">
@@ -920,11 +925,9 @@
             confirmButtonText: "Yes, delete it!",
             closeOnConfirm: false
         }, function(){
-
             swal("Deleted!", "Your imaginary file has been deleted.", "success");
             window.location.href = link;
         });
-
     }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
