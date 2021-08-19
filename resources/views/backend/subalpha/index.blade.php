@@ -18,6 +18,7 @@
                         <thead>
                         <tr>
                             <th class="text-center">SL</th>
+                            <th class="text-center">Alpha Name</th>
                             <th class="text-center">Sub Alpha Name</th>
                             <th class="text-center">Description</th>
                             <th class="text-center">Action</th>
@@ -30,6 +31,7 @@
                                 <tr>
                                     <td class="text-center">{{$i+1}}</td>
                                     @php $i++;  @endphp
+                                    <td class="text-center">{{$key->alp_name->alpha_name}}</td>
                                     <td class="text-center">{{$key->sub_alpha_name}}</td>
                                     <td class="text-center">{{$key->sub_alpha_description}}</td>
                                     <td class="text-center">
