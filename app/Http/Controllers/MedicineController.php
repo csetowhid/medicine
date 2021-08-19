@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Alpha;
+use App\Models\Subalpha;
 use Illuminate\Http\Request;
 use App\Models\Medicine;
 //use DataTables;
@@ -11,7 +12,8 @@ class MedicineController extends Controller
     public function index()
     {
         $alpha = Alpha::all();
-        return view('backend.medicine.index',compact('alpha'));
+        $subalpha = Subalpha::all();
+        return view('backend.medicine.index',compact('alpha','subalpha'));
     }
     public function add(Request $request)
     {

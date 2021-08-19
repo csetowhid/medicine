@@ -53,6 +53,7 @@
                         <label for="validationCustom008">Alphabet</label>
                         <div class="input-group">
                             <select class="form-control" id="validationCustom202" required>
+                                <option value="">Select</option>
                                 @if(isset($alpha))
                                     @foreach($alpha as $al)
                                 <option value="{{$al->id}}">{{$al->alpha_name}}</option>
@@ -67,7 +68,14 @@
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom009">Sub Alphabet </label>
                         <div class="input-group">
-                            <input type="text" class="form-control" name="medicine_drug_class" id="validationCustom009" placeholder="Drug Class" required>
+                            <select class="form-control" id="validationCustom202" required>
+                                <option value="">Select</option>
+                                @if(isset($subalpha))
+                                    @foreach($subalpha as $sub)
+                                        <option value="{{$sub->id}}">{{$sub->sub_alpha_name}}</option>
+                                    @endforeach
+                                @endif
+                            </select>
                             <div class="invalid-tooltip">
                                 Please Provide Sub Alphabet.
                             </div>
