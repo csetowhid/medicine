@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Alpha;
 use App\Models\Sub_alpha;
 use App\Models\Subalpha;
 use Illuminate\Http\Request;
@@ -10,8 +11,9 @@ class SubAlphaController extends Controller
 {
     public function sub_alpha_index()
     {
+        $alpha = Alpha::all();
         $subalpha = Subalpha::all();
-        return view('backend.subalpha.index',compact('subalpha'));
+        return view('backend.subalpha.index',compact('subalpha','alpha'));
     }
     public function sub_alpha_create(Request $request)
     {
@@ -19,6 +21,7 @@ class SubAlphaController extends Controller
         if (isset($id))
         {
             $subalpha = Subalpha::findorfail($id);
+            $subalpha->alpha_id = $request->alpha_id;
             $subalpha->sub_alpha_name = $request->sub_alpha_name;
             $subalpha->sub_alpha_description = $request->sub_alpha_description;
             $update = $subalpha->save();
@@ -40,6 +43,7 @@ class SubAlphaController extends Controller
                 'sub_alpha_description' => 'required',
             ]);
             $subalpha = new SubAlpha();
+            $subalpha->alpha_id = $request->alpha_id;
             $subalpha->sub_alpha_name = $request->sub_alpha_name;
             $subalpha->sub_alpha_description = $request->sub_alpha_description;
             $insert = $subalpha->save();

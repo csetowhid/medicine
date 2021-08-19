@@ -6,7 +6,6 @@
                 <div class="row">
                     <div class="col-md-6">
                         <button class="btn btn-primary">Sub Alpha List</button>
-
                     </div>
                     <div class="col-md-6 d-flex justify-content-end">
                         <button class="btn btn-primary" data-toggle="modal" data-target="#modal-3">Add Sub Alpha </button>
@@ -55,6 +54,22 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="form-row">
+                                        <label for="validationCustom008">Alphabet</label>
+                                        <div class="input-group">
+                                            <select class="form-control" id="validationCustom202" name="alpha_id" required>
+                                                <option value="">Select</option>
+                                                @if(isset($alpha))
+                                                    @foreach($alpha as $al)
+                                                        <option value="{{$al->id}}">{{$al->alpha_name}}</option>
+                                                    @endforeach
+                                                @endif
+                                            </select>
+                                            <div class="invalid-tooltip">
+                                                Please Provide Alphabet.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
                                         <label for="validationCustom008">Sub Alpha Name</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" name="sub_alpha_name" id="validationCustom008" placeholder="Sub Alpha Name" required>
@@ -88,14 +103,30 @@
                         <div class="modal-content">
                             <form action="{{route('sub.alpha.create')}}" method="post" class="needs-validation" novalidate>
                                 @csrf
-                                <input type="text"  id="sub_alpha_id" name="sub_alpha_id">
+                                <input type="hidden"  id="sub_alpha_id" name="sub_alpha_id">
                                 <div class="modal-header">
                                     <h3 class="modal-title has-icon ms-icon-round "><i class="flaticon-share bg-primary text-white"></i>Edit Sub Alphabet</h3>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 </div>
                                 <div class="modal-body">
                                     <div class="form-row">
-                                        <label for="validationCustom008">Alpha Name</label>
+                                        <label for="validationCustom008">Alphabet</label>
+                                        <div class="input-group">
+                                            <select class="form-control" id="alpha_id" name="alpha_id" required>
+                                                <option value="">Select</option>
+                                                @if(isset($alpha))
+                                                    @foreach($alpha as $al)
+                                                        <option value="{{$al->id}}">{{$al->alpha_name}}</option>
+                                                    @endforeach
+                                                @endif
+                                            </select>
+                                            <div class="invalid-tooltip">
+                                                Please Provide Alphabet.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="validationCustom008">Sub Alpha Name</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" id="sub_alpha_name" name="sub_alpha_name" placeholder="Alpha Name">
                                         </div>
@@ -135,14 +166,17 @@
                 success: function(data) {
                     // console.log(data);
                     var id = "",
+                        alp_id ="",
                         name = "",
                         descriiption = "",
 
                         id = data.id;
+                    alp_id = data.alpha_id;
                     name = data.sub_alpha_name;
                     descriiption = data.sub_alpha_description;
 
                     document.getElementById("sub_alpha_id").value = id;
+                    document.getElementById("alpha_id").value = alp_id;
                     document.getElementById("sub_alpha_name").value = name;
                     document.getElementById("sub_alpha_description").value = descriiption;
 

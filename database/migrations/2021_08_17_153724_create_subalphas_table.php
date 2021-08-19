@@ -15,6 +15,7 @@ class CreateSubalphasTable extends Migration
     {
         Schema::create('subalphas', function (Blueprint $table) {
             $table->id();
+            $table->integer('alpha_id');
             $table->string('sub_alpha_name')->unique();
             $table->longText('sub_alpha_description');
             $table->timestamps();
