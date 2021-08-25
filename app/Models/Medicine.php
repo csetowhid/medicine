@@ -10,6 +10,8 @@ class Medicine extends Model
     use HasFactory;
 
     protected $fillable = [
+        'alpha_id',
+        'subalpha_id',
         'medicine_name',
         'medicine_generic_name',
         'medicine_brand_name',

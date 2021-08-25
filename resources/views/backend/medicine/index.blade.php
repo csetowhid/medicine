@@ -52,7 +52,7 @@
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom008">Alphabet</label>
                         <div class="input-group">
-                            <select class="form-control" id="validationCustom202" required>
+                            <select class="form-control" name="alpha_id" id="alpha_idds" required>
                                 <option value="">Select</option>
                                 @if(isset($alpha))
                                     @foreach($alpha as $al)
@@ -68,7 +68,7 @@
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom009">Sub Alphabet </label>
                         <div class="input-group">
-                            <select class="form-control" id="validationCustom202" required>
+                            <select class="form-control" name="subalpha_id" id="sub_idds" required>
                                 <option value="">Select</option>
                                 @if(isset($subalpha))
                                     @foreach($subalpha as $sub)
@@ -172,6 +172,39 @@
     </div>
 @endsection
 @section('js')
+    <script>
+        var a = <?php echo json_encode($subalpha, true); ?>;
+        $('select[id="alphabet_idd"]').change(function () {
+            var val = $(this).val();
+            $('select[id="sub_idd"]').html('<option value="">Select</option>');
+            a.forEach(function (data) {
+                if (data.alpha_id == val) {
+                    var html = '<option value="';
+                    html += data.subalpha_id;
+                    html += '">';
+                    html += data.sub_alpha_name;
+                    html += '</option>';
+                    $('select[id="sub_idd"]').append(html);
+                }
+            });
+        });
+
+        $('select[id="alpha_idds"]').change(function () {
+            var val = $(this).val();
+            $('select[id="sub_idds"]').html('<option value="">Select</option>');
+            a.forEach(function (data) {
+                if (data.alpha_id == val) {
+                    var html = '<option value="';
+                    html += data.subalpha_id;
+                    html += '">';
+                    html += data.sub_alpha_name;
+                    html += '</option>';
+                    $('select[id="sub_idds"]').append(html);
+                }
+            });
+        });
+    </script>
+
     <script>
         $(document).ready(function() {
             $('#summernote').summernote({
