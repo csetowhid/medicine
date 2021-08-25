@@ -57,59 +57,59 @@
     <!--=========================-->
     <header id="header" class="header_area hdr_area_two hdr_area_four">
         <!-- Start top toolbar -->
-        <section class="top_toolbar top_toolbar_new">
-            <div class="vigo_container_one">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="toolbar_left">
-                            <p><span>Get 30% Discounts!</span> Offer ends in</p>
-                            <div id="count_down"></div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="toolbar_right">
-                            <ul>
-                                <li class="search">
-                                    <i class="fas fa-search"></i>
-                                </li>
-                                <li class="cart">
-                                    <i class="fas fa-shopping-basket"></i>
-                                    <div class="cart_detail">
-                                        <div class="single_cart">
-                                            <div class="cart_left">
-                                                <img src="{{asset('frontend/media/images/banner-two/cart-one.png')}}" alt="">
-                                            </div>
-                                            <div class="cart_right">
-                                                <h3>Vaxin Regular Big Name</h3>
-                                                <p>$66 <sup>USD</sup></p>
-                                            </div>
-                                        </div>
-                                        <div class="single_cart">
-                                            <div class="cart_left">
-                                                <img src="{{asset('frontend/media/images/banner-two/cart-two.png')}}" alt="">
-                                            </div>
-                                            <div class="cart_right">
-                                                <h3>Vaxin Woman</h3>
-                                                <p>$76 <sup>USD</sup></p>
-                                            </div>
-                                        </div>
-                                        <div class="cart_more">
-                                            <a href="#">View Cart <i class="fa fa-angle-right"></i></a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="phone">
-                                    <a href="#">
-                                        <i class="fas fa-phone"></i>
-                                        Call +123 4567890
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+{{--        <section class="top_toolbar top_toolbar_new">--}}
+{{--            <div class="vigo_container_one">--}}
+{{--                <div class="row">--}}
+{{--                    <div class="col-xl-6 col-lg-6">--}}
+{{--                        <div class="toolbar_left">--}}
+{{--                            <p><span>Get 30% Discounts!</span> Offer ends in</p>--}}
+{{--                            <div id="count_down"></div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-xl-6 col-lg-6">--}}
+{{--                        <div class="toolbar_right">--}}
+{{--                            <ul>--}}
+{{--                                <li class="search">--}}
+{{--                                    <i class="fas fa-search"></i>--}}
+{{--                                </li>--}}
+{{--                                <li class="cart">--}}
+{{--                                    <i class="fas fa-shopping-basket"></i>--}}
+{{--                                    <div class="cart_detail">--}}
+{{--                                        <div class="single_cart">--}}
+{{--                                            <div class="cart_left">--}}
+{{--                                                <img src="{{asset('frontend/media/images/banner-two/cart-one.png')}}" alt="">--}}
+{{--                                            </div>--}}
+{{--                                            <div class="cart_right">--}}
+{{--                                                <h3>Vaxin Regular Big Name</h3>--}}
+{{--                                                <p>$66 <sup>USD</sup></p>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="single_cart">--}}
+{{--                                            <div class="cart_left">--}}
+{{--                                                <img src="{{asset('frontend/media/images/banner-two/cart-two.png')}}" alt="">--}}
+{{--                                            </div>--}}
+{{--                                            <div class="cart_right">--}}
+{{--                                                <h3>Vaxin Woman</h3>--}}
+{{--                                                <p>$76 <sup>USD</sup></p>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="cart_more">--}}
+{{--                                            <a href="#">View Cart <i class="fa fa-angle-right"></i></a>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </li>--}}
+{{--                                <li class="phone">--}}
+{{--                                    <a href="#">--}}
+{{--                                        <i class="fas fa-phone"></i>--}}
+{{--                                        Call +123 4567890--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </section>--}}
         <!-- End top toolbar -->
 
         <!-- Start Main Menu -->
@@ -575,52 +575,52 @@
     </section>
 
 
-    <section class="modal" id="loading-subscribe1">
-        <div class="modal-dialog">
-            <div class="loading-subscribe loading-subscribe-white">
-                <div class="loading-subscribe-inner">
-                    <div class="loading-subscribe-img">
-                        <img src="{{asset('frontend/media/images/popup/Light.jpg')}}" alt="">
-                    </div>
-                    <div class="loading-subscribe-detail">
-                        <div class="loading-subscribe-top">
-                            <h1>Want <span>X Factor</span><br> Within ?</h1>
-                            <p>Subscribe us and get promotional discounts upto massive <span>90% OFF!</span> Type your email below now!</p>
-                        </div>
-                        <form action="#">
-                            <p class="loading-subscribe-input">
-                                <input type="text" placeholder="Click & type your email here">
-                            </p>
-                            <p class="loading-subscribe-submit">
-                                <button>Subscribe
-                                    <i class="material-icons">
-                                        keyboard_backspace
-                                    </i>
-                                </button>
-                            </p>
-                        </form>
-                    </div>
-                </div>
-                <div class="remove">
-                    <button type="button" data-dismiss="modal">
-                        <i class="material-icons">
-                            clear
-                        </i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="modal" id="loading-subscribe1">--}}
+{{--        <div class="modal-dialog">--}}
+{{--            <div class="loading-subscribe loading-subscribe-white">--}}
+{{--                <div class="loading-subscribe-inner">--}}
+{{--                    <div class="loading-subscribe-img">--}}
+{{--                        <img src="{{asset('frontend/media/images/popup/Light.jpg')}}" alt="">--}}
+{{--                    </div>--}}
+{{--                    <div class="loading-subscribe-detail">--}}
+{{--                        <div class="loading-subscribe-top">--}}
+{{--                            <h1>Want <span>X Factor</span><br> Within ?</h1>--}}
+{{--                            <p>Subscribe us and get promotional discounts upto massive <span>90% OFF!</span> Type your email below now!</p>--}}
+{{--                        </div>--}}
+{{--                        <form action="#">--}}
+{{--                            <p class="loading-subscribe-input">--}}
+{{--                                <input type="text" placeholder="Click & type your email here">--}}
+{{--                            </p>--}}
+{{--                            <p class="loading-subscribe-submit">--}}
+{{--                                <button>Subscribe--}}
+{{--                                    <i class="material-icons">--}}
+{{--                                        keyboard_backspace--}}
+{{--                                    </i>--}}
+{{--                                </button>--}}
+{{--                            </p>--}}
+{{--                        </form>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="remove">--}}
+{{--                    <button type="button" data-dismiss="modal">--}}
+{{--                        <i class="material-icons">--}}
+{{--                            clear--}}
+{{--                        </i>--}}
+{{--                    </button>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
-    <section class="megamenu-cookies">
-        <div class="remove">
-            <i class="material-icons">
-                clear
-            </i>
-        </div>
-        <p>This Website uses cookies to ensure you get the best experience in our website. We also use analytics software to track data of visitors. See more info <a href="#">here</a></p>
-        <a class="agree" href="#">I agree</a>
-    </section>
+{{--    <section class="megamenu-cookies">--}}
+{{--        <div class="remove">--}}
+{{--            <i class="material-icons">--}}
+{{--                clear--}}
+{{--            </i>--}}
+{{--        </div>--}}
+{{--        <p>This Website uses cookies to ensure you get the best experience in our website. We also use analytics software to track data of visitors. See more info <a href="#">here</a></p>--}}
+{{--        <a class="agree" href="#">I agree</a>--}}
+{{--    </section>--}}
 
     <!--==========================-->
     <!--=        Banner         =-->
@@ -665,193 +665,205 @@
     <section class="home5_recent">
         <div class="vigo_container_one">
             <div class="section_title_four">
-                <h2>RECENT</h2>
+                <h2>Browse Medicine</h2>
             </div>
-            <div class="home5_recent_slider owl-carousel">
-                <div class="home5_recent_slide">
-                    <div class="off">
-                        - 8%
-                    </div>
-                    <div class="home5_recent_thumb">
-                        <img src="{{asset('frontend/media/images/home6/recent-one.png')}}" alt="gg">
-                        <span>$12</span>
-                    </div>
-                    <div class="home5_recent_appreciate">
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                    </div>
-                    <div class="home5_recent_title">
-                        <h3><a href="product-detail.html">Vaxin Regular (500mg), Mild Intake</a></h3>
-                    </div>
-                    <div class="home5_recent_view_cart clearfix">
-                        <a href="#" class="trigger"><i class="fas fa-expand"></i> QUICK VIEW</a>
-                        <a href="#"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>
-                    </div>
+{{--            <div class="home5_recent_slider owl-carousel">--}}
+{{--                <div class="home5_recent_slide">--}}
+{{--                    <div class="off">--}}
+{{--                        - 8%--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_thumb">--}}
+{{--                        <img src="{{asset('frontend/media/images/home6/recent-one.png')}}" alt="gg">--}}
+{{--                        <span>$12</span>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_appreciate">--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_title">--}}
+{{--                        <h3><a href="product-detail.html">Vaxin Regular (500mg), Mild Intake</a></h3>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_view_cart clearfix">--}}
+{{--                        <a href="#" class="trigger"><i class="fas fa-expand"></i> QUICK VIEW</a>--}}
+{{--                        <a href="#"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="home5_recent_slide">--}}
+{{--                    <div class="home5_recent_thumb">--}}
+{{--                        <img src="{{asset('frontend/media/images/home6/recent-two.png')}}" alt="gg">--}}
+{{--                        <span>$12</span>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_appreciate">--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_title">--}}
+{{--                        <h3><a href="product-detail.html">Vaxin Regular (500mg), Mild Intake</a></h3>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_view_cart clearfix">--}}
+{{--                        <a href="#" class="trigger"><i class="fas fa-expand"></i> QUICK VIEW</a>--}}
+{{--                        <a href="#"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="home5_recent_slide">--}}
+{{--                    <div class="home5_recent_thumb">--}}
+{{--                        <img src="{{asset('frontend/media/images/home6/recent-three.png')}}" alt="gg">--}}
+{{--                        <span>$12</span>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_appreciate">--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_title">--}}
+{{--                        <h3><a href="product-detail.html">Vaxin Regular (500mg), Mild Intake</a></h3>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_view_cart clearfix">--}}
+{{--                        <a href="#" class="trigger"><i class="fas fa-expand"></i> QUICK VIEW</a>--}}
+{{--                        <a href="#"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="home5_recent_slide">--}}
+{{--                    <div class="home5_recent_thumb">--}}
+{{--                        <img src="{{asset('frontend/media/images/home6/recent-four.png')}}" alt="gg">--}}
+{{--                        <span>$12</span>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_appreciate">--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_title">--}}
+{{--                        <h3><a href="product-detail.html">Vaxin Regular (500mg), Mild Intake</a></h3>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_view_cart clearfix">--}}
+{{--                        <a href="#" class="trigger"><i class="fas fa-expand"></i> QUICK VIEW</a>--}}
+{{--                        <a href="#"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="home5_recent_slide">--}}
+{{--                    <div class="home5_recent_thumb">--}}
+{{--                        <img src="{{asset('frontend/media/images/home6/recent-three.png')}}" alt="gg">--}}
+{{--                        <span>$12</span>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_appreciate">--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_title">--}}
+{{--                        <h3><a href="product-detail.html">Vaxin Regular (500mg), Mild Intake</a></h3>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_view_cart clearfix">--}}
+{{--                        <a href="#" class="trigger"><i class="fas fa-expand"></i> QUICK VIEW</a>--}}
+{{--                        <a href="#"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+                <div class="home5_recent_slide d-flex flex-row">
+                    @if(isset($alpha))
+                        @foreach($alpha as $al)
+                                                <div class="home5_recent_appreciate">
+                                                    <a href="{{URL::to('/alpha/'.Str::lower($al->alpha_name))}}">
+                                                        <button class="btn btn-success">
+                                                        {{$al->alpha_name}}
+                                                        </button>
+                                                    </a>
+                                                </div>
+
+                        @endforeach
+                    @endif
+{{--                    <div class="home5_recent_thumb">--}}
+{{--                        <img src="{{asset('frontend/media/images/home6/recent-four.png')}}" alt="gg">--}}
+{{--                        <span>$12</span>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_appreciate">--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="far fa-star"></i>--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_title">--}}
+{{--                        <h3><a href="product-detail.html">Vaxin Regular (500mg), Mild Intake</a></h3>--}}
+{{--                    </div>--}}
+{{--                    <div class="home5_recent_view_cart clearfix">--}}
+{{--                        <a href="#" class="trigger"><i class="fas fa-expand"></i> QUICK VIEW</a>--}}
+{{--                        <a href="#"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>--}}
+{{--                    </div>--}}
                 </div>
-                <div class="home5_recent_slide">
-                    <div class="home5_recent_thumb">
-                        <img src="{{asset('frontend/media/images/home6/recent-two.png')}}" alt="gg">
-                        <span>$12</span>
-                    </div>
-                    <div class="home5_recent_appreciate">
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                    </div>
-                    <div class="home5_recent_title">
-                        <h3><a href="product-detail.html">Vaxin Regular (500mg), Mild Intake</a></h3>
-                    </div>
-                    <div class="home5_recent_view_cart clearfix">
-                        <a href="#" class="trigger"><i class="fas fa-expand"></i> QUICK VIEW</a>
-                        <a href="#"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>
-                    </div>
-                </div>
-                <div class="home5_recent_slide">
-                    <div class="home5_recent_thumb">
-                        <img src="{{asset('frontend/media/images/home6/recent-three.png')}}" alt="gg">
-                        <span>$12</span>
-                    </div>
-                    <div class="home5_recent_appreciate">
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                    </div>
-                    <div class="home5_recent_title">
-                        <h3><a href="product-detail.html">Vaxin Regular (500mg), Mild Intake</a></h3>
-                    </div>
-                    <div class="home5_recent_view_cart clearfix">
-                        <a href="#" class="trigger"><i class="fas fa-expand"></i> QUICK VIEW</a>
-                        <a href="#"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>
-                    </div>
-                </div>
-                <div class="home5_recent_slide">
-                    <div class="home5_recent_thumb">
-                        <img src="{{asset('frontend/media/images/home6/recent-four.png')}}" alt="gg">
-                        <span>$12</span>
-                    </div>
-                    <div class="home5_recent_appreciate">
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                    </div>
-                    <div class="home5_recent_title">
-                        <h3><a href="product-detail.html">Vaxin Regular (500mg), Mild Intake</a></h3>
-                    </div>
-                    <div class="home5_recent_view_cart clearfix">
-                        <a href="#" class="trigger"><i class="fas fa-expand"></i> QUICK VIEW</a>
-                        <a href="#"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>
-                    </div>
-                </div>
-                <div class="home5_recent_slide">
-                    <div class="home5_recent_thumb">
-                        <img src="{{asset('frontend/media/images/home6/recent-three.png')}}" alt="gg">
-                        <span>$12</span>
-                    </div>
-                    <div class="home5_recent_appreciate">
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                    </div>
-                    <div class="home5_recent_title">
-                        <h3><a href="product-detail.html">Vaxin Regular (500mg), Mild Intake</a></h3>
-                    </div>
-                    <div class="home5_recent_view_cart clearfix">
-                        <a href="#" class="trigger"><i class="fas fa-expand"></i> QUICK VIEW</a>
-                        <a href="#"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>
-                    </div>
-                </div>
-                <div class="home5_recent_slide">
-                    <div class="home5_recent_thumb">
-                        <img src="{{asset('frontend/media/images/home6/recent-four.png')}}" alt="gg">
-                        <span>$12</span>
-                    </div>
-                    <div class="home5_recent_appreciate">
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                        <a href="#">
-                            <i class="far fa-star"></i>
-                        </a>
-                    </div>
-                    <div class="home5_recent_title">
-                        <h3><a href="product-detail.html">Vaxin Regular (500mg), Mild Intake</a></h3>
-                    </div>
-                    <div class="home5_recent_view_cart clearfix">
-                        <a href="#" class="trigger"><i class="fas fa-expand"></i> QUICK VIEW</a>
-                        <a href="#"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>
-                    </div>
-                </div>
-            </div>
+{{--            </div>--}}
         </div>
     </section>
 

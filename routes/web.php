@@ -5,11 +5,12 @@ use App\Http\Controllers\MedicineController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\AlphaController;
 use App\Http\Controllers\SubAlphaController;
+use App\Http\Controllers\IndexController;
 
-Route::get('/', function () {
-    return view('home.homepage');
-});
-
+//Route::get('/', function () {
+//    return view('home.homepage');
+//});
+Route::get('/', [IndexController::class, 'index'])->name('index');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -39,3 +40,6 @@ Route::get('/subalpha', [SubAlphaController::class, 'sub_alpha_index'])->name('s
 Route::post('/subalpha/create', [SubAlphaController::class, 'sub_alpha_create'])->name('sub.alpha.create');
 Route::get('/subalpha/edit/{id}', [SubAlphaController::class, 'sub_alpha_edit']);
 Route::get('/subalpha/delete/{id}', [SubAlphaController::class, 'sub_alpha_delete']);
+
+//Frontend
+Route::get('/alpha/{alpha_name}', [IndexController::class, 'alpha_name']);
