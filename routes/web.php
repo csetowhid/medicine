@@ -42,4 +42,4 @@ Route::get('/subalpha/edit/{id}', [SubAlphaController::class, 'sub_alpha_edit'])
 Route::get('/subalpha/delete/{id}', [SubAlphaController::class, 'sub_alpha_delete']);
 
 //Frontend
-Route::get('/alpha/{alpha_name}', [IndexController::class, 'alpha_name']);
+Route::get('/alpha/{id}', [IndexController::class, 'alpha_name']);
