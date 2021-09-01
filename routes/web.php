@@ -7,39 +7,40 @@ use App\Http\Controllers\AlphaController;
 use App\Http\Controllers\SubAlphaController;
 use App\Http\Controllers\IndexController;
 
-//Route::get('/', function () {
-//    return view('home.homepage');
-//});
+
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::prefix('admin')->middleware('is_admin')->group(function (){
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'admin_index'])->name('admin.home');
 
-//Medicine
-Route::get('/medicine/index', [MedicineController::class, 'index'])->name('medicine.index');
-Route::post('/medicine/add', [MedicineController::class, 'add'])->name('medicine.add');
-Route::get('/medicine/all', [MedicineController::class, 'all'])->name('medicine.all');
-Route::get('/medicine/medicine_delete/{id}', [MedicineController::class, 'medicine_delete'])->name('medicine_delete');
-Route::get('/medicine/medicine_edit/{id}', [MedicineController::class, 'medicine_edit'])->name('medicine.edit');
+    //Medicine
+    Route::get('/medicine/index', [MedicineController::class, 'index'])->name('medicine.index');
+    Route::post('/medicine/add', [MedicineController::class, 'add'])->name('medicine.add');
+    Route::get('/medicine/all', [MedicineController::class, 'all'])->name('medicine.all');
+    Route::get('/medicine/medicine_delete/{id}', [MedicineController::class, 'medicine_delete'])->name('medicine_delete');
+    Route::get('/medicine/medicine_edit/{id}', [MedicineController::class, 'medicine_edit'])->name('medicine.edit');
 
-//Settings
-Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
-Route::post('/settings/add', [SettingsController::class, 'add'])->name('settings.add');
-Route::post('/settings/update', [SettingsController::class, 'update'])->name('settings.update');
+    //Settings
+    Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
+    Route::post('/settings/add', [SettingsController::class, 'add'])->name('settings.add');
+    Route::post('/settings/update', [SettingsController::class, 'update'])->name('settings.update');
 
 
-//Alpha
-Route::get('/alpha', [AlphaController::class, 'alpha_index'])->name('alpha.index');
-Route::post('/alpha/create', [AlphaController::class, 'alpha_create'])->name('alpha.create');
-Route::get('/alpha/edit/{id}', [AlphaController::class, 'alpha_edit']);
-Route::get('/alpha/delete/{id}', [AlphaController::class, 'alpha_delete'])->name('alpha.delete');
+    //Alpha
+    Route::get('/alpha', [AlphaController::class, 'alpha_index'])->name('alpha.index');
+    Route::post('/alpha/create', [AlphaController::class, 'alpha_create'])->name('alpha.create');
+    Route::get('/alpha/edit/{id}', [AlphaController::class, 'alpha_edit']);
+    Route::get('/alpha/delete/{id}', [AlphaController::class, 'alpha_delete'])->name('alpha.delete');
 
 //Sub Alpha
-Route::get('/subalpha', [SubAlphaController::class, 'sub_alpha_index'])->name('sub.alpha.index');
-Route::post('/subalpha/create', [SubAlphaController::class, 'sub_alpha_create'])->name('sub.alpha.create');
-Route::get('/subalpha/edit/{id}', [SubAlphaController::class, 'sub_alpha_edit']);
-Route::get('/subalpha/delete/{id}', [SubAlphaController::class, 'sub_alpha_delete']);
+    Route::get('/subalpha', [SubAlphaController::class, 'sub_alpha_index'])->name('sub.alpha.index');
+    Route::post('/subalpha/create', [SubAlphaController::class, 'sub_alpha_create'])->name('sub.alpha.create');
+    Route::get('/subalpha/edit/{id}', [SubAlphaController::class, 'sub_alpha_edit']);
+    Route::get('/subalpha/delete/{id}', [SubAlphaController::class, 'sub_alpha_delete']);
+});
 
 //Frontend
 Route::get('/alpha/{id}', [IndexController::class, 'alpha_name']);

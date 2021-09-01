@@ -1,5 +1,5 @@
-@extends('backend.layouts.app')
-@section('content')
+@extends('backend.layouts.admin')
+@section('admin_content')
     <div class="col-xl-12 col-md-12 col-sm-6">
         <div class="ms-panel">
             <div class="ms-panel-header">

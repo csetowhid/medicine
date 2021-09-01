@@ -26,4 +26,9 @@ class HomeController extends Controller
 //        return view('home');
         return view('backend.dashboard');
     }
+
+    public function admin_index()
+    {
+        return view('admin.adminhome');
+    }
 }
