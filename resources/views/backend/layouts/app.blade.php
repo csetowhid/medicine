@@ -95,10 +95,20 @@
     <!-- Navigation -->
     <ul class="accordion ms-main-aside fs-14" id="side-nav-accordion">
         <!-- Dashboard -->
+        <li class="menu-item">
+            <a href="{{route('home')}}">
+                <span><i class="material-icons fs-16">dashboard</i>Dashboard </span>
+            </a>
+        </li>
+
                 <li class="menu-item">
-                    <a href="}">
-                        <span><i class="material-icons fs-16">dashboard</i>Blog </span>
+                    <a href="#" class="has-chevron" data-toggle="collapse" data-target="#basic-elements" aria-expanded="false" aria-controls="basic-elements">
+                        <span><i class="material-icons fs-16">border_color</i>Blog </span>
                     </a>
+                    <ul id="basic-elements" class="collapse" aria-labelledby="basic-elements" data-parent="#side-nav-accordion">
+                        <li> <a href="{{route('blog.index')}}">Add Blog</a> </li>
+                        <li> <a href="{{route('blog.all')}}">Blog List</a> </li>
+                    </ul>
                 </li>
 {{--        <li class="menu-item">--}}
 {{--            <a href="{{route('home')}}">--}}

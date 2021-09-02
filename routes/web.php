@@ -6,13 +6,13 @@ use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\AlphaController;
 use App\Http\Controllers\SubAlphaController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\BlogController;
 
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+/*-----------------------Admin Route---------------------*/
 Route::prefix('admin')->middleware('is_admin')->group(function (){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'admin_index'])->name('admin.home');
 
@@ -44,3 +44,12 @@ Route::prefix('admin')->middleware('is_admin')->group(function (){
 
 //Frontend
 Route::get('/alpha/{id}', [IndexController::class, 'alpha_name']);
+
+
+/*-----------------------User Route---------------------*/
+Route::prefix('user')->group(function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/blog/index', [App\Http\Controllers\BlogController::class, 'index'])->name('blog.index');
+    Route::post('/blog/create', [App\Http\Controllers\BlogController::class, 'create'])->name('blog.create');
+    Route::get('/blog/all', [App\Http\Controllers\BlogController::class, 'all'])->name('blog.all');
+});
