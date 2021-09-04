@@ -3,52 +3,61 @@
     <div class="col-xl-12 col-md-12 col-sm-6">
         <div class="ms-panel">
             <div class="ms-panel-header">
-                <h6>All Medicine Name</h6>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="btn btn-primary">{{Auth::user()->name}} Blog List</button>
+
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end">
+                        <button class="btn btn-primary">Add New Blog </button>
+                    </div>
+                </div>
             </div>
             <div class="ms-panel-body">
                 <div class="table-responsive">
-                    <table id="data_table" class="table table-striped thead-primary w-100">
+                    <table class="table table-striped thead-primary">
                         <thead>
                         <tr>
+                            <th class="text-center">SL</th>
                             <th class="text-center">Title</th>
-{{--                            <th class="text-center">Image</th>--}}
+                            <th class="text-center">Image</th>
                             <th class="text-center">Status</th>
+                            <th class="text-center">Point</th>
                             <th class="text-center">Action</th>
                         </tr>
                         </thead>
+                        <tbody>
+                        @if(isset($blog))
+                            @php $i = 0 @endphp
+                            @foreach($blog as $key)
+                                <tr>
+                                    <td class="text-center">{{$i+1}}</td>
+                                    @php $i++;  @endphp
+                                    <td class="text-center" style="max-width: 200px;">{{$key->blog_title}}</td>
+                                    <td class="text-center">
+                                        <img src="{{URL::to($key->blog_image)}}" style="max-width: 80px;">
+                                    </td>
+                                    <td class="text-center">
+                                        @if ($key->blog_status == '1')
+                                            <button class="btn btn-sm btn-success" style="margin-top: 0;">Active</button>
+                                        @elseif($key->blog_status == '2')
+                                            <button class="btn btn-sm btn-danger" style="margin-top: 0;">Pending</button>
+                                        @else
+                                            <button class="btn btn-sm btn-danger" style="margin-top: 0;">Deactive</button>
+                                        @endif
+                                    </td>
+                                    <td class="text-center">{{$key->blog_point}}</td>
+                                    <td class="text-center">
+                                        <a style="cursor:pointer;" onclick="edit({{$key->id}})"><i class="fas fa-pencil-alt ms-text-primary" data-toggle="modal" data-target="#modal-edit"></i></a>
+                                        <a style="cursor:pointer;" onclick="confirm('{{URL::to('alpha/delete/'.$key->id)}}')"><i class="far fa-trash-alt ms-text-danger"></i></a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @endif
+                        </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-@endsection
-@section('js')
-    <script>
-        $(document).ready(function (){
-            iss()
-        })
-        function iss(){
-            $('#data_table').DataTable({
-                serverSide:true,
-                responsive: true,
-                ajax : {
-                    url : "{{route('blog.all')}}"
-                },
-                columns:[
-                    // {
-                    //     "data" :null, "sortable": false,
-                    //     render : function (data, type, row, meta) {
-                    //         return meta.row + meta.settings._iDisplayStart + 1
-                    //     }
-                    // },
-                    {data: 'medicine_name', name: 'blog_title'},
-                    {data: 'medicine_generic_name', name: 'medicine_generic_name'},
-                    {data: 'medicine_brand_name', name: 'medicine_brand_name'},
-                    {data: 'medicine_drug_class', name: 'medicine_drug_class'},
-                    {data: 'status', name: 'blog_status'},
-                    {data: 'Actions', name: 'Actions'},
-                ]
-            })
-        }
-    </script>
 @endsection

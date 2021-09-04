@@ -18,5 +18,6 @@ class Blog extends Model
         'blog_seo_description',
         'blog_status',
         'blog_added_id',
+        'blog_point',
     ];
 }

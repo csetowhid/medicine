@@ -23,6 +23,7 @@ class CreateBlogsTable extends Migration
             $table->longText('blog_seo_description');
             $table->string('blog_image')->nullable();
             $table->boolean('blog_status')->default(2);
+            $table->boolean('blog_point')->default(0);
             $table->timestamps();
         });
     }

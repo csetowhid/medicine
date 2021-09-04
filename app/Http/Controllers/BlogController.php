@@ -56,19 +56,7 @@ class BlogController extends Controller
 
     public function all()
     {
-        $data = Blog::where('blog_added_id',Auth::id());
-        if (request()->ajax()){
-            return datatables()->of($data)
-//            ->make(true);
-                ->addColumn('Actions',function ($data){
-                    $button= '<a href="medicine_edit/'.$data->id.'"><button style="margin-top: 0;" class="btn btn-sm btn-pill btn-gradient-primary">Edit</button></a>';
-
-                    $button .= '<a href="medicine_delete/'.$data->id.'"><button style="margin-top: 0;" class="btn btn-pill btn-sm btn-gradient-danger">Delete</button></a>';
-                    return $button;
-                })
-                ->rawColumns(['Actions','status'])
-                ->make(true);
-        }
-        return view('backend.blog.all');
+        $blog = Blog::where('blog_added_id',Auth::id())->get();
+        return view('backend.blog.all',compact('blog'));
     }
 }
