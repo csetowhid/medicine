@@ -34,42 +34,42 @@
                             <textarea id="summernote" name="blog_description"></textarea>
                         </div>
                     </div>
-                    <hr>
-                    <div class="form-row">
-                        <div class="col-md-12 mb-3">
-                            <label for="validationCustom009">SEO Title</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" value="{{ old('blog_seo_title') }}" name="blog_seo_title" id="validationCustom009" placeholder="SEO Title" required>
-                                <div class="invalid-tooltip">
-                                    Please Provide a SEO Title.
-                                </div>
-                            </div>
-                            <small>SEO Title can't be More Than 60 Words</small>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-md-12 mb-3">
-                            <label for="validationCustom009">Permalink</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" value="{{ old('blog_seo_permalink') }}" name="blog_seo_permalink" id="validationCustom009" placeholder="SEO Permalink" required>
-                                <div class="invalid-tooltip">
-                                    Please Provide a SEO Permalink.
-                                </div>
-                            </div>
-                            <small>SEO Permalink can't be More Than 160 Words</small>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-md-12 mb-3">
-                            <label for="validationCustom009">Description</label>
-                            <div class="input-group">
-                                <textarea class="form-control" value="{{ old('blog_seo_description') }}" name="blog_seo_description" id="validationCustom009" placeholder="SEO Description" required rows="3"></textarea>
-                                <div class="invalid-tooltip">
-                                    Please Provide a SEO Description.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+{{--                    <hr>--}}
+{{--                    <div class="form-row">--}}
+{{--                        <div class="col-md-12 mb-3">--}}
+{{--                            <label for="validationCustom009">SEO Title</label>--}}
+{{--                            <div class="input-group">--}}
+{{--                                <input type="text" class="form-control" value="{{ old('blog_seo_title') }}" name="blog_seo_title" id="validationCustom009" placeholder="SEO Title" required>--}}
+{{--                                <div class="invalid-tooltip">--}}
+{{--                                    Please Provide a SEO Title.--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <small>SEO Title can't be More Than 60 Words</small>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="form-row">--}}
+{{--                        <div class="col-md-12 mb-3">--}}
+{{--                            <label for="validationCustom009">Permalink</label>--}}
+{{--                            <div class="input-group">--}}
+{{--                                <input type="text" class="form-control" value="{{ old('blog_seo_permalink') }}" name="blog_seo_permalink" id="validationCustom009" placeholder="SEO Permalink" required>--}}
+{{--                                <div class="invalid-tooltip">--}}
+{{--                                    Please Provide a SEO Permalink.--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <small>SEO Permalink can't be More Than 160 Words</small>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="form-row">--}}
+{{--                        <div class="col-md-12 mb-3">--}}
+{{--                            <label for="validationCustom009">Description</label>--}}
+{{--                            <div class="input-group">--}}
+{{--                                <textarea class="form-control" value="{{ old('blog_seo_description') }}" name="blog_seo_description" id="validationCustom009" placeholder="SEO Description" required rows="3"></textarea>--}}
+{{--                                <div class="invalid-tooltip">--}}
+{{--                                    Please Provide a SEO Description.--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </form>

@@ -44,12 +44,13 @@ Route::prefix('admin')->middleware('is_admin')->group(function (){
 
 //Frontend
 Route::get('/alpha/{id}', [IndexController::class, 'alpha_name']);
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 /*-----------------------User Route---------------------*/
 //Route::prefix('user')->group(function () {
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/blog/index', [App\Http\Controllers\BlogController::class, 'index'])->name('blog.index');
     Route::post('/blog/create', [App\Http\Controllers\BlogController::class, 'create'])->name('blog.create');
     Route::get('/blog/all', [App\Http\Controllers\BlogController::class, 'all'])->name('blog.all');
+    Route::get('/blog/edit/{id}', [App\Http\Controllers\BlogController::class, 'edit']);
+    Route::get('/blog/delete/{id}', [App\Http\Controllers\BlogController::class, 'delete']);
 //});

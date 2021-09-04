@@ -6,10 +6,9 @@
                 <div class="row">
                     <div class="col-md-6">
                         <button class="btn btn-primary">{{Auth::user()->name}} Blog List</button>
-
                     </div>
                     <div class="col-md-6 d-flex justify-content-end">
-                        <button class="btn btn-primary">Add New Blog </button>
+                        <a href="{{route('blog.index')}}"> <button class="btn btn-primary">Add New Blog </button></a>
                     </div>
                 </div>
             </div>
@@ -27,7 +26,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @if(isset($blog))
+                        @if(!empty($blog))
                             @php $i = 0 @endphp
                             @foreach($blog as $key)
                                 <tr>
@@ -48,8 +47,8 @@
                                     </td>
                                     <td class="text-center">{{$key->blog_point}}</td>
                                     <td class="text-center">
-                                        <a style="cursor:pointer;" onclick="edit({{$key->id}})"><i class="fas fa-pencil-alt ms-text-primary" data-toggle="modal" data-target="#modal-edit"></i></a>
-                                        <a style="cursor:pointer;" onclick="confirm('{{URL::to('alpha/delete/'.$key->id)}}')"><i class="far fa-trash-alt ms-text-danger"></i></a>
+                                        <a style="cursor:pointer;" href="{{URL::to('/blog/edit/'.$key->id)}}"><i class="fas fa-pencil-alt ms-text-primary"></i></a>
+                                        <a style="cursor:pointer;" onclick="confirm('{{URL::to('blog/delete/'.$key->id)}}')"><i class="far fa-trash-alt ms-text-danger"></i></a>
                                     </td>
                                 </tr>
                             @endforeach
