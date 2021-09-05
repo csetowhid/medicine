@@ -17,4 +17,9 @@ class Blog extends Model
         'blog_added_id',
         'blog_point',
     ];
+
+    public function blogger_name()
+    {
+        return $this->belongsTo(User::class,'blog_added_id');
+    }
 }

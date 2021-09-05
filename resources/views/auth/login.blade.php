@@ -72,7 +72,7 @@
                         </div>
                         <button class="btn btn-primary mt-4 d-block w-100" type="submit">Sign In</button>
                         <span class="d-block text-center my-4">Or</span>
-                        <p class="mb-0 mt-3 text-center">Don't have an account? <a class="btn-link" href="default-register.html">Create Account</a> </p>
+                        <p class="mb-0 mt-3 text-center">Don't have an account? <a class="btn-link" href="{{route('register')}}">Create Account</a> </p>
                     </form>
                 </div>
             </div>

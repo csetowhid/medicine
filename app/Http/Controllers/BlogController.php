@@ -110,4 +110,10 @@ class BlogController extends Controller
         }
         return back()->with($notification);
     }
+
+    public function admin_blog_index()
+    {
+        $blog = Blog::all();
+        return view('backend.admin.blog.home',compact('blog'));
+    }
 }

@@ -101,6 +101,11 @@
             </a>
         </li>
         <li class="menu-item">
+            <a href="{{route('admin.blog.home')}}">
+                <span><i class="material-icons fs-16">border_color</i>Blog </span>
+            </a>
+        </li>
+        <li class="menu-item">
             <a href="{{route('alpha.index')}}">
                 <span><i class="material-icons fs-16">adjust</i>Alpha </span>
             </a>
