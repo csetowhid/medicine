@@ -116,4 +116,26 @@ class BlogController extends Controller
         $blog = Blog::all();
         return view('backend.admin.blog.home',compact('blog'));
     }
+
+    public function admin_blog_change($id,$blog_status)
+    {
+        $update = Blog::where('id',$id)->update(array('blog_status'=>$blog_status));
+        $blog_status = Blog::where('id',$id)->first()->blog_status;
+        if($blog_status == '1')
+        {
+            Blog::where('id',$id)->update(array('blog_point'=>'5'));
+        }
+        if ($update) {
+            $notification=array(
+                'messege'=>'Successfully Blog Updated!',
+                'alert-type'=>'success'
+            );
+        }else{
+            $notification=array(
+                'messege'=>'Something went wrong !',
+                'alert-type'=>'error'
+            );
+        }
+        return back()->with($notification);
+    }
 }

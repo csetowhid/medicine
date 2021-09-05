@@ -42,14 +42,27 @@
                                         @if ($key->blog_status == '1')
                                             <button class="btn btn-sm btn-success" style="margin-top: 0;">Active</button>
                                         @elseif($key->blog_status == '2')
-                                            <button class="btn btn-sm btn-danger" style="margin-top: 0;">Pending</button>
+                                            <button class="btn btn-sm btn-info" style="margin-top: 0;">Pending</button>
                                         @else
                                             <button class="btn btn-sm btn-danger" style="margin-top: 0;">Deactive</button>
                                         @endif
                                     </td>
                                     <td class="text-center">{{$key->blog_point}}</td>
                                     <td class="text-center">
-{{--                                        <a style="cursor:pointer;" href="{{URL::to('/blog/edit/'.$key->id)}}"><i class="fas fa-pencil-alt ms-text-primary"></i></a>--}}
+                                                <i class="fas fa-pencil-alt ms-text-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                                                <div class="dropdown-menu">
+                                                    <?php
+                                                        if ($key->blog_status == '1') { ?>
+                                                            <a class="dropdown-item" href="{{URL::to('admin/blog/status/'.$key->id.'/'.'0')}}"><button class="btn btn-sm btn-danger" style="margin-top: 0;">Deactive</button></a>
+                                                         
+                                                        <?php } elseif ($key->blog_status == '2') { ?>
+                                                    <a class="dropdown-item" href="{{URL::to('admin/blog/status/'.$key->id.'/'.'1')}}"><button class="btn btn-sm btn-success" style="margin-top: 0;">Active</button></a>
+                                                    <a class="dropdown-item" href="{{URL::to('admin/blog/status/'.$key->id.'/'.'0')}}"><button class="btn btn-sm btn-danger" style="margin-top: 0;">Deactive</button></a>
+                                                        <?php } else{ ?>
+                                                            <a class="dropdown-item" href="{{URL::to('admin/blog/status/'.$key->id.'/'.'1')}}"><button class="btn btn-sm btn-success" style="margin-top: 0;">Active</button></a>
+                                                        <?php }
+                                                        ?>
+                                                </div>
                                         <a style="cursor:pointer;" onclick="confirm('{{URL::to('blog/delete/'.$key->id)}}')"><i class="far fa-trash-alt ms-text-danger"></i></a>
                                     </td>
                                 </tr>

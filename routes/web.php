@@ -42,6 +42,7 @@ Route::prefix('admin')->middleware('is_admin')->group(function (){
     Route::get('/subalpha/delete/{id}', [SubAlphaController::class, 'sub_alpha_delete']);
     //Blog
     Route::get('/blog/home', [BlogController::class, 'admin_blog_index'])->name('admin.blog.home');
+    Route::get('/blog/status/{id}/{blog_status}', [BlogController::class, 'admin_blog_change']);
 });
 
 //Frontend
