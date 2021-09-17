@@ -22,5 +22,6 @@ class Medicine extends Model
         'medicine_seo_permalink',
         'medicine_seo_description',
         'medicine_status',
+        'medicine_most_popular',
     ];
 }

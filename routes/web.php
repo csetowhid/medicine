@@ -27,7 +27,8 @@ Route::prefix('admin')->middleware('is_admin')->group(function (){
     Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
     Route::post('/settings/add', [SettingsController::class, 'add'])->name('settings.add');
     Route::post('/settings/update', [SettingsController::class, 'update'])->name('settings.update');
-
+    Route::get('/settings/home', [SettingsController::class, 'homesettings'])->name('settings.home');
+    Route::get('/settings/popular/{id}/{status}', [SettingsController::class, 'settings_popular']);
 
     //Alpha
     Route::get('/alpha', [AlphaController::class, 'alpha_index'])->name('alpha.index');

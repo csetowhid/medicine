@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Medicine;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 
@@ -54,6 +55,32 @@ class SettingsController extends Controller
         );
         }
         return back()->with($notification);
+    }
 
+    public function homesettings()
+    {
+        $medicine = Medicine::all();
+        return view('backend.settings.home',compact('medicine'));
+    }
+
+    public function settings_popular($id,$status)
+    {
+        if ($status==1)
+        $update = Medicine::where('id',$id)->update(array('medicine_most_popular'=>0));
+        else{
+            $update = Medicine::where('id',$id)->update(array('medicine_most_popular'=>1));
+        }
+        if ($update) {
+            $notification=array(
+                'messege'=>'Successfully Popular Category Updated!',
+                'alert-type'=>'success'
+            );
+        }else{
+            $notification=array(
+                'messege'=>'Something went wrong !',
+                'alert-type'=>'error'
+            );
+        }
+        return back()->with($notification);
     }
 }

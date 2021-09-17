@@ -126,11 +126,23 @@
                 <li> <a href="{{route('medicine.all')}}">Medicine List</a> </li>
             </ul>
         </li>
+
         <li class="menu-item">
-            <a href="{{route('settings.index')}}">
-                <span><i class="material-icons fs-16">settings</i>Settings </span>
+            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#settings-elements" aria-expanded="false" aria-controls="settings-elements">
+                <span><i class="material-icons fs-16">settings</i>Settings</span>
             </a>
+            <ul id="settings-elements" class="collapse" aria-labelledby="settings-elements" data-parent="#side-nav-accordion">
+                <li> <a href="{{route('settings.index')}}">All Settings</a> </li>
+                <li> <a href="{{route('settings.home')}}">Home Settings</a> </li>
+            </ul>
         </li>
+
+
+{{--        <li class="menu-item">--}}
+{{--            <a href="{{route('settings.index')}}">--}}
+{{--                <span><i class="material-icons fs-16">settings</i>Settings </span>--}}
+{{--            </a>--}}
+{{--        </li>--}}
         <!-- /Basic UI Elements -->
 
         {{--        <!-- Charts -->--}}

@@ -27,6 +27,7 @@ class CreateMedicinesTable extends Migration
             $table->string('medicine_seo_permalink');
             $table->longText('medicine_seo_description');
             $table->integer('medicine_status');
+            $table->integer('medicine_most_popular')->default(0);
             $table->timestamps();
         });
     }
