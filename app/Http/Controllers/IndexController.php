@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Alpha;
+use App\Models\Medicine;
 use App\Models\Subalpha;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,8 @@ class IndexController extends Controller
     public function index()
     {
         $alpha = Alpha::all();
-        return view('frontend.index',compact('alpha'));
+        $medicine = Medicine::where('medicine_most_popular',1)->get();
+        return view('frontend.index',compact('alpha','medicine'));
     }
     public function alpha_name($id)
     {

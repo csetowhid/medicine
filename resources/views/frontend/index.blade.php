@@ -1004,48 +1004,52 @@
                 <h2>MOST Popular</h2>
             </div>
             <div class="row">
-                <div class="col-xl-3 col-sm-6 col-lg-3">
-                    <div class="sn_related_product">
-                        <div class="sn_pd_img">
-                            <a href="#">
-                                <img src="{{asset('frontend/media/images/banner-two/related-pd-one.png')}}" alt="">
-                            </a>
+                @if(!empty($medicine))
+                    @foreach($medicine as $med)
+                        <div class="col-xl-3 col-sm-6 col-lg-3">
+                            <div class="sn_related_product">
+                                <div class="sn_pd_img">
+                                    <a href="#">
+                                        @if(!empty($med->medicine_image))
+                                        <img src="{{URL::to($med->medicine_image)}}" alt="">
+                                            @else
+{{--                                            <img src="{{asset('frontend/media/images/banner-two/related-pd-one.png')}}" alt="">--}}
+                                            <img src="{{asset('upload/no_image.jpg')}}" alt="">
+                                            @endif
+                                    </a>
+                                </div>
+                                <div class="sn_pd_rating">
+                                    <a href="#">
+                                        <i class="far fa-star"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="far fa-star"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="far fa-star"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="far fa-star"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="far fa-star"></i>
+                                    </a>
+                                </div>
+                                <div class="sn_pd_detail">
+                                    <h5>
+                                        <a href="#">{{$med->medicine_name}}</a>
+                                    </h5>
+{{--                                    <ins>--}}
+{{--                                        <span>$16.00</span>--}}
+{{--                                    </ins>--}}
+{{--                                    <del>--}}
+{{--                                        <span>$20.00</span>--}}
+{{--                                    </del>--}}
+                                </div>
+                            </div>
                         </div>
-                        <div class="sn_pd_rating">
-                            <a href="#">
-                                <i class="far fa-star"></i>
-                            </a>
-                            <a href="#">
-                                <i class="far fa-star"></i>
-                            </a>
-                            <a href="#">
-                                <i class="far fa-star"></i>
-                            </a>
-                            <a href="#">
-                                <i class="far fa-star"></i>
-                            </a>
-                            <a href="#">
-                                <i class="far fa-star"></i>
-                            </a>
-                        </div>
-                        <div class="sn_pd_detail">
-                            <h5>
-                                <a href="#">Vaxin Regular (500mg), Mild Intake</a>
-                            </h5>
-                            <ins>
-                                <span>$16.00</span>
-                            </ins>
-                            <del>
-                                <span>$20.00</span>
-                            </del>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
+                    @endforeach
+                @endif
             </div>
         </div>
     </section>
