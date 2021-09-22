@@ -3,7 +3,7 @@
     <section class="mobile-menu-inner mobile-menu-inner-two">
         <div class="mobile_accor_togo">
             <div class="mobile_accor_logo">
-                <a href="index.html">
+                <a href="{{route('index')}}">
                     <img src="{{asset('frontend/assets/img/hm-two-logo.png')}}" class="svg" alt="">
                 </a>
             </div>
@@ -14,7 +14,7 @@
         <nav id="accordian">
             <ul class="accordion-menu">
                 <li class="current_page_item">
-                    <a href="index.html" class="dropdownlink">Home</a>
+                    <a href="{{route('index')}}" class="dropdownlink">Home</a>
                     <ul class="submenuItems">
                         <li><i class="flaticon-right-arrow-angle"></i><a href="index.html">Home One</a></li>
                         <li><i class="flaticon-right-arrow-angle"></i><a href="index2.html">Home Two</a></li>
@@ -95,17 +95,6 @@
                                 done_all
                             </i> FEEL STRONGER
                         </p>
-                    </div>
-                    <div class="banner_static_download">
-                        <p>
-                            Get our expert diet chart for free
-                        </p>
-                        <a href="#" class="btn_download">
-                            download
-                            <i class="material-icons">
-                                get_app
-                            </i>
-                        </a>
                     </div>
                 </div>
                 <div class="banner_static_right">
@@ -923,159 +912,176 @@
         </div>
     </div>
 
-    <!--==========================-->
-    <!--=        Video         =-->
-    <!--==========================-->
-    {{--    <section class="home5_video">--}}
-    {{--        <div class="vigo_container_two">--}}
-    {{--            <div class="home5_video_total">--}}
-    {{--                <div class="section_title_four">--}}
-    {{--                    <h2>LAB SNEAK PEEK</h2>--}}
-    {{--                </div>--}}
-    {{--                <div class="home5_video_left">--}}
-    {{--                    <p>Lorem ipsum dolor sit ametures & consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>--}}
-    {{--                    <div class="home5_video_social">--}}
-    {{--                        <span>SHARE US -</span>--}}
-    {{--                        <a href="#">--}}
-    {{--                            <i class="fab fa-facebook-f"></i>--}}
-    {{--                        </a>--}}
-    {{--                        <a href="#">--}}
-    {{--                            <i class="fab fa-twitter"></i>--}}
-    {{--                        </a>--}}
-    {{--                        <a href="#">--}}
-    {{--                            <i class="fab fa-medium-m"></i>--}}
-    {{--                        </a>--}}
-    {{--                        <a href="#">--}}
-    {{--                            <i class="fab fa-tumblr"></i>--}}
-    {{--                        </a>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--                <div class="youtube-wrapper home5_video_right">--}}
-    {{--                    <div class="youtube-poster" data-bg-image="{{asset('frontend/media/images/home6/video-5.png')}}"></div>--}}
-    {{--                    <iframe src="https://www.youtube.com/embed/pCo40Y6UpWg" allowfullscreen></iframe>--}}
-    {{--                    <i class="material-icons play">--}}
-    {{--                        play_arrow--}}
-    {{--                    </i>--}}
-    {{--                    <i class="material-icons pause">--}}
-    {{--                        pause--}}
-    {{--                    </i>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-    {{--        </div>--}}
-    {{--    </section>--}}
 
-    <!--==========================-->
-    <!--=        Video         =-->
-    <!--==========================-->
-    {{--    <section class="home5_pricing">--}}
-    {{--        <div class="vigo_container_two">--}}
-    {{--            <div class="row">--}}
-    {{--                <div class="col-xl-4 col-md-6">--}}
-    {{--                    <div class="home5_pricing_single">--}}
-    {{--                        <h3>FREE</h3>--}}
-    {{--                        <span>SHIPPING POLICY</span>--}}
-    {{--                        <i class="fas fa-ship"></i>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--                <div class="col-xl-4 col-md-6">--}}
-    {{--                    <div class="home5_pricing_single">--}}
-    {{--                        <h3>14 DAYS</h3>--}}
-    {{--                        <span>MONEYBACK GURANTEED</span>--}}
-    {{--                        <i class="fab fa-android"></i>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--                <div class="col-xl-4 col-md-6">--}}
-    {{--                    <div class="home5_pricing_single">--}}
-    {{--                        <h3>CALL</h3>--}}
-    {{--                        <span>SUPPORT INCLUDED</span>--}}
-    {{--                        <i class="fas fa-headphones"></i>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-    {{--        </div>--}}
-    {{--    </section>--}}
 
-    <!--==========================-->
-    <!--=        Video         =-->
-    <!--==========================-->
     <section class="home5-most-sold" data-bg-image="{{asset('frontend/media/images/home6/most-sold.jpg')}}">
         <div class="vigo_container_one">
             <div class="section_title_four">
-                <h2>MOST Popular</h2>
+                <h2>Blog</h2>
             </div>
-            <div class="row">
-                @if(!empty($medicine))
-                    @foreach($medicine as $med)
-                        <div class="col-xl-3 col-sm-6 col-lg-3">
-                            <div class="sn_related_product">
-                                <div class="sn_pd_img">
-                                    <a href="#">
-                                        @if(!empty($med->medicine_image))
-                                        <img src="{{URL::to($med->medicine_image)}}" alt="">
-                                            @else
-{{--                                            <img src="{{asset('frontend/media/images/banner-two/related-pd-one.png')}}" alt="">--}}
-                                            <img src="{{asset('upload/no_image.jpg')}}" alt="">
-                                            @endif
-                                    </a>
+
+            <div class="blog_all_list">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="blog_single_list">
+                            <div class="blog_single_list_img">
+                                <div class="post-thumbnail">
+                                    <img src="{{asset('frontend/media/images/home6/blog-one.jpg')}}" alt="!!">
                                 </div>
-                                <div class="sn_pd_rating">
+                                <a href="#" class="blog_single_list_btn">
+                            <span>read</span>
+                            <i class="material-icons">
+                                arrow_forward
+                            </i>
+                        </a>
+                            </div>
+                            <div class="blog_single_list_content">
+                                <h3 class="blog_title">
+                                    <a href="#">Rich Diet You Must Take Along With All Body Suppliment Support.</a>
+                                </h3>
+                                <div class="blog_meta">
                                     <a href="#">
-                                        <i class="far fa-star"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="far fa-star"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="far fa-star"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="far fa-star"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="far fa-star"></i>
-                                    </a>
-                                </div>
-                                <div class="sn_pd_detail">
-                                    <h5>
-                                        <a href="#">{{$med->medicine_name}}</a>
-                                    </h5>
-{{--                                    <ins>--}}
-{{--                                        <span>$16.00</span>--}}
-{{--                                    </ins>--}}
-{{--                                    <del>--}}
-{{--                                        <span>$20.00</span>--}}
-{{--                                    </del>--}}
+                                <span>24<sup>th</sup> December</span>
+                            </a>
                                 </div>
                             </div>
                         </div>
-                    @endforeach
-                @endif
+                    </div>
+                    <div class="col-md-6">
+                        <div class="blog_single_list">
+                            <div class="blog_single_list_img">
+                                <div class="post-thumbnail">
+                                    <img src="{{asset('frontend/media/images/home6/blog-two.jpg')}}" alt="!!">
+                                </div>
+                                <a href="#" class="blog_single_list_btn">
+                            <span>read</span>
+                            <i class="material-icons">
+                                arrow_forward
+                            </i>
+                        </a>
+                            </div>
+                            <div class="blog_single_list_content">
+                                <h3 class="blog_title">
+                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</a>
+                                </h3>
+                                <div class="blog_meta">
+                                    <a href="#">
+                                <span>24<sup>th</sup> December</span>
+                            </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="blog_single_list">
+                            <div class="blog_single_list_img">
+                                <div class="post-thumbnail">
+                                    <img src="{{asset('frontend/media/images/home6/blog-three.jpg')}}" alt="!!">
+                                </div>
+                                <a href="#" class="blog_single_list_btn">
+                                <span>read</span>
+                                <i class="material-icons">
+                                    arrow_forward
+                                </i>
+                                </a>
+                            </div>
+                            <div class="blog_single_list_content">
+                                <h3 class="blog_title">
+                                    <a href="#">Rich Diet You Must Take Along With All Body Suppliment Support.</a>
+                                </h3>
+                                <div class="blog_meta">
+                                    <a href="#">
+                                <span>24<sup>th</sup> December</span>
+                            </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="blog_single_list">
+                            <div class="blog_single_list_img">
+                                <div class="post-thumbnail">
+                                    <img src="{{asset('frontend/media/images/home6/blog-one.jpg')}}" alt="!!">
+                                </div>
+                                <a href="#" class="blog_single_list_btn">
+                                    <span>read</span>
+                                    <i class="material-icons">
+                                        arrow_forward
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="blog_single_list_content">
+                                <h3 class="blog_title">
+                                    <a href="#">Rich Diet You Must Take Along With All Body Suppliment Support.</a>
+                                </h3>
+                                <div class="blog_meta">
+                                    <a href="#">
+                                <span>24<sup>th</sup> December</span>
+                            </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+            </div>
+
+        </div>
+    </section>
+                    
+                
+
+    <section class="home5_recent home5_feature">
+        <div class="vigo_container_one">
+            <div class="section_title_four">
+                <h2>Most Popular</h2>
+            </div>
+            <div class="home5_recent_slider owl-carousel">
+                @foreach($medicine as $med)
+
+                <div class="home5_recent_slide">
+                    <div class="home5_recent_thumb">
+                        @if(!empty($med->medicine_image))
+                                    <img src="{{URL::to($med->medicine_image)}}" style="width: 230px;height:200px;">
+                        @else
+                                    <img src="{{asset('upload/no_image.jpg')}}" style="width: 230px;height:200px;">
+                        @endif
+                        
+                    </div>
+                    <div class="home5_recent_appreciate">
+                        <a href="#">
+                            <i class="far fa-star"></i>
+                        </a>
+                                <a href="#">
+                            <i class="far fa-star"></i>
+                        </a>
+                                <a href="#">
+                            <i class="far fa-star"></i>
+                        </a>
+                                <a href="#">
+                            <i class="far fa-star"></i>
+                        </a>
+                                <a href="#">
+                            <i class="far fa-star"></i>
+                        </a>
+                    </div>
+                    <div class="home5_recent_title">
+                        <h3><a href="product-detail.html">{{$med->medicine_name}}</a></h3>
+                    </div>
+                    <div class="home5_recent_view_cart clearfix">
+                        <a href="#" class="trigger"><i class="fas fa-expand"></i> QUICK VIEW</a>
+                    </div>
+                </div>
+                @endforeach
+                
             </div>
         </div>
     </section>
-
-    <!--==========================-->
-    <!--=        Video         =-->
-    <!--==========================-->
-    {{--    <section class="call_to_action_green">--}}
-    {{--        <div class="vigo_container_two">--}}
-    {{--            <div class="call_to_action_area_two">--}}
-    {{--                <div class="row">--}}
-    {{--                    <div class="col-xl-10 offset-xl-2">--}}
-    {{--                        <div class="call_to_action_hello">--}}
-    {{--                            <div class="call_to_action_left_two">--}}
-    {{--                                <h2>LIVE HEALTHY?</h2>--}}
-    {{--                                <p>Try out our suppliment & enjoy the healthiest life. Discounts end soon!</p>--}}
-    {{--                            </div>--}}
-    {{--                            <div class="call_to_action_right_two">--}}
-    {{--                                <a href="#" class="btn_four">Purchase</a>--}}
-    {{--                            </div>--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-    {{--        </div>--}}
-    {{--    </section>--}}
-
-    <!--==========================-->
+    
 @endsection

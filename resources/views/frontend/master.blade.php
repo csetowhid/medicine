@@ -118,7 +118,7 @@
                 <div class="row">
                     <div class="col-auto mr-auto">
                         <div class="header_logo">
-                            <a href="index.html">
+                            <a href="{{route('index')}}">
                                 <img class="logo-default" src="{{asset('frontend/media/images/home6/logo.png')}}" alt="">
                                 <img class="logo-white" src="{{asset('frontend/media/images/home6/footer-logo.png')}}" alt="">
                             </a>
@@ -128,17 +128,10 @@
                         <nav class="main_menu">
                             <ul id="example-one">
                                 <li>
-                                    <a class="current_page_item active" href="index.html">Home</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">Home One</a></li>
-                                        <li><a href="index2.html">Home Two</a></li>
-                                    </ul>
+                                    <a class="current_page_item active" href="{{route('index')}}">Home</a>
                                 </li>
                                 <li>
                                     <a href="supplement.html">Supplement</a>
-                                </li>
-                                <li>
-                                    <a href="feature.html">Feature</a>
                                 </li>
                                 <li>
                                     <a href="collection.html">Product</a>
@@ -147,9 +140,6 @@
                                         <li><a href="product-detail.html">Product Detail</a></li>
                                         <li><a href="collection-all.html">Collection All</a></li>
                                     </ul>
-                                </li>
-                                <li>
-                                    <a href="ingredient.html">Ingredient</a>
                                 </li>
                                 <li>
                                     <a href="blog.html">blog</a>
@@ -392,7 +382,7 @@
                     </div>
                     <div class="col-auto">
                         <div class="hdr_btn_wrapper">
-                            <a href="#"><i class="fas fa-caret-right"></i> Purchase</a>
+                            <a href="{{route('login')}}"><i class="fas fa-caret-right"></i>Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -452,27 +442,6 @@
     <!--==========================-->
     <footer class="footer_five_area">
         <div class="vigo_container_one">
-            <div class="footer_five_top">
-                <div class="footer_five_top_left">
-                    <a href="#" class="logo">
-                        <img src="{{asset('frontend/media/images/home6/footer-logo.png')}}" alt="#">
-                    </a>
-                </div>
-                <div class="footer_five_top_right">
-                    <form action="#">
-                        <label>
-                            <i class="fas fa-arrow-right"></i>
-                            <span>SUBSCRIBE TO OUR NEWSLETTER FOR OFFERS & PROMOTIONALS.</span>
-                        </label>
-                        <input type="text" placeholder="type your email here...">
-                        <button>
-                            <i class="material-icons">
-                                send
-                            </i>
-                        </button>
-                    </form>
-                </div>
-            </div>
             <div class="footer_five_middle clearfix">
                 <div class="widget widget5">
                     <div class="widget5_about">
@@ -598,29 +567,6 @@
             <div class="footer_five_bottom">
                 <div class="footer_four_bottom_left">
                     <p>Copyright© <a href="#">ThemeIM</a> | All Rights Reserved</p>
-                </div>
-                <div class="footer_four_bottom_right">
-                    <a href="#">
-                        <img src="{{asset('frontend/media/images/home6/visa.png')}}" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="{{asset('frontend/media/images/home6/american-express.png')}}" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="{{asset('frontend/media/images/home6/discover.png')}}" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="{{asset('frontend/media/images/home6/paypal.png')}}" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="{{asset('frontend/media/images/home6/stripe.png')}}" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="{{asset('frontend/media/images/home6/nettler.png')}}" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="{{asset('frontend/media/images/home6/payoneer.png')}}" alt="">
-                    </a>
                 </div>
                 <div class="backtotop">
                     <i class="fas fa-angle-double-up"></i>
